@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>User who can request and view laboratory equipment bookings.</description>
+        <elevated_privilege>false</elevated_privilege>
+        <federated_id>dDfyzH31OcXVfx9KDJOqsxbIS2veiY1JZQtzaYs326c=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_2140056_lab_eq_0.requester</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>requester</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 14:00:32</sys_created_on>
+        <sys_id>3a26ce102f160b1076c014807fa4e386</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2140056_lab_eq_0.requester</sys_name>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name>sys_user_role_3a26ce102f160b1076c014807fa4e386</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 14:00:32</sys_updated_on>
+    </sys_user_role>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="5c5e2ecc2f5a871076c014807fa4e33b" label="Equipment" max_length="40" name="x_2140056_lab_eq_0_equipment" type="collection">
+        <element label="Purchase Date" max_length="255" name="purchase_date" type="glide_date"/>
+        <element label="Equipment ID" mandatory="true" max_length="40" name="equipment_id" type="string"/>
+        <element label="Laboratory" mandatory="true" max_length="32" name="laboratory" reference="x_2140056_lab_eq_0_laboratory" reference_qual="lab_nameLIKE^EQ" reference_qual_condition="lab_nameLIKE^EQ" type="reference"/>
+        <element label="Description" max_length="200" name="description" type="string"/>
+        <element display="true" label="Equipment Name" mandatory="true" max_length="100" name="equipment_name" type="string"/>
+        <element label="Manufacturer" max_length="40" name="manufacturer" type="string"/>
+        <element label="Serial Number" max_length="40" name="serial_number" type="string"/>
+        <element choice="1" label="Status" mandatory="true" max_length="255" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Available" sequence="0" value="available"/>
+                <element inactive_on_update="false" label="Unavailable" sequence="3" value="unavailable"/>
+                <element inactive_on_update="false" label="Booked" sequence="1" value="booked"/>
+                <element inactive_on_update="false" label="Maintenance" sequence="2" value="maintenance"/>
+            </choice>
+        </element>
+        <element label="Category" mandatory="true" max_length="32" name="category" reference="x_2140056_lab_eq_0_equipment_category" reference_qual="category_nameSTARTSWITH^EQ" reference_qual_condition="category_nameSTARTSWITH^EQ" type="reference"/>
+        <index name="index">
+            <element name="category"/>
+        </index>
+        <index name="index2">
+            <element name="laboratory"/>
+        </index>
+    </element>
+</database>

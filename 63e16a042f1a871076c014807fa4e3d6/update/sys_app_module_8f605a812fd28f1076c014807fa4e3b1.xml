@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Lab Equipment Booking Application">586c06892f928f1076c014807fa4e34a</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>SEPARATOR</link_type>
+        <map_page/>
+        <mobile_title> Administratio</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>600</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles/>
+        <route/>
+        <screen/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-23 22:38:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8f605a812fd28f1076c014807fa4e3b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name> Administration</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name>sys_app_module_8f605a812fd28f1076c014807fa4e3b1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-23 22:38:55</sys_updated_on>
+        <timeline_page/>
+        <title> Administration</title>
+        <uncancelable>false</uncancelable>
+        <ux_list/>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

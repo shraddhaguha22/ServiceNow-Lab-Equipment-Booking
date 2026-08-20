@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="10fb2e882f5a871076c014807fa4e38c" label="Laboratory" max_length="40" name="x_2140056_lab_eq_0_laboratory" type="collection">
+        <element label="Lab-in-charge" max_length="32" name="lab_in_charge" reference="sys_cb_user_preference" type="reference"/>
+        <element label="Department" mandatory="true" max_length="100" name="department" type="string"/>
+        <element label="Location" max_length="100" name="location" type="string"/>
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Active" sequence="0" value="active"/>
+                <element inactive_on_update="false" label="Inactive" sequence="1" value="inactive"/>
+            </choice>
+        </element>
+        <element display="true" label="Lab Name" mandatory="true" max_length="80" name="lab_name" type="string"/>
+        <element label="Lab Code" mandatory="true" max_length="40" name="lab_code" type="string"/>
+        <index name="index">
+            <element name="lab_in_charge"/>
+        </index>
+    </element>
+</database>

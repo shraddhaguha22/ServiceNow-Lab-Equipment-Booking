@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="INSERT_OR_UPDATE">
+        <canvas display_value="">4d97803d63ff3c5e6de5d3b3ec8be731</canvas>
+        <component display_value="Vertical bar">23051643b7e03010097cb81cde11a910</component>
+        <component_props>{"configVersion":"23.0.0-ci-SNAPSHOT","yAxisHidden":false,"yAxisPosition":"bottom","yAxisShowGrid":true,"xAxisWrapLabels":false,"xAxisMaxLabelSize":100,"xAxisTruncationType":"end","yAxisStyle":"clean","showDataLabels":false,"dataLabelPosition":"above","showStackedValues":"none","showOverlappingLabels":false,"newReporting":false,"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"sourceType":"table","tableOrViewName":"x_2140056_lab_eq_0_booking","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzIxNDAwNTZfbGFiX2VxXzBfYm9va2luZzE3ODQ4MjU2NTc1OTk2NDA4NzM1LjU4MjQwNTM2Nw==","dataCategories":["trend","group","simple"]}],"headerTitle":"Equipment Usage","showHeader":true,"showBorder":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"wrapTitle":false,"showHeaderSeparator":false,"bareBorder":false,"telemetry":"null","showDataPassthrough":false,"metrics":[{"dataSource":"dGFibGV4XzIxNDAwNTZfbGFiX2VxXzBfYm9va2luZzE3ODQ4MjU2NTc1OTk2NDA4NzM1LjU4MjQwNTM2Nw==","id":"ZEdGaWJHVjRYekl4TkRBd05UWmZiR0ZpWDJWeFh6QmZZbTl2YTJsdVp6RTNPRFE0TWpVMk5UYzFPVGsyTkRBNE56TTFMalU0TWpRd05UTTJOdz09MTc4NDgyNTY1NzYwMDYwMzA3NjcwLjAxMDgzNDk3","aggregateFunction":"COUNT","axisId":"primary","numberFormat":{"customFormat":true,"rounding":"HALF_UP","decimalPrecision":0,"abbreviationEnabled":true,"numberInTooltipsEnabled":true,"thousandSeparatorEnabled":true}}],"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzIxNDAwNTZfbGFiX2VxXzBfYm9va2luZzE3ODQ4MjU2NTc1OTk2NDA4NzM1LjU4MjQwNTM2Nw==","groupByField":"equipment","isRange":false,"isChoice":false,"isPaBucket":false}],"maxNumberOfGroups":12,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":true,"disableRanges":false}],"sortBy":"value","sortByOrder":"desc","showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableCustomEmptyState":false,"emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","showMaximumRange":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"showChangeFrom":"previous","period":"M","dateFormat":"default","showDataTable":false,"showLegend":false,"showLegendValue":false,"legendExpandToFit":false,"legendPosition":"bottom","legendHorizontalAlignment":"center","chartVariation":"grouped","colorConfig":{"type":"default"},"autoAggregatePeriods":false,"userInfo":"@context.session.user","enableAddZerosAtApi":true,"emptyStateHeadingLevel":3,"scoreType":"latest","showClosestSeriesOnHover":true,"showAdditionalGroupBySelector":false,"cacheExpirationTime":0,"showLoadingIndicator":false,"useDataCache":false,"showFilterAsSeparateSeries":false,"showCacheTime":true,"hideDevSettings":false,"allowAdditionalGroupByPerMetric":false,"lineClamp":1,"allowChangeDateRange":false,"showExportOptions":true,"xAxisHidden":false,"showRefresh":true,"useCurrentDateForEnd":false,"enableClickAndStay":false,"showDateRangeByDefault":false,"filterConfigurations":"@state.parFilters","headerTitleAlignment":"start","headingLevel":2,"showPercentageOfTotalInTooltip":true}</component_props>
+        <h>13</h>
+        <name>Equipment Usage</name>
+        <required_translations>[{"comment":"","message":"Equipment Usage","code":"PAR_DASHBOARD.4d97803d63ff3c5e6de5d3b3ec8be731.617a5d1118f568524a08422cf9b26925"},{"comment":"","message":"No data available.","code":"PAR_DASHBOARD.4d97803d63ff3c5e6de5d3b3ec8be731.617a5d1118f568524a08422cf9b26925"},{"comment":"","message":"There are no scores available for the selected criteria. Contact your admin for more info.","code":"PAR_DASHBOARD.4d97803d63ff3c5e6de5d3b3ec8be731.617a5d1118f568524a08422cf9b26925"}]</required_translations>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-23 16:54:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>617a5d1118f568524a08422cf9b26925</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Equipment Usage</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name>par_dashboard_widget_617a5d1118f568524a08422cf9b26925</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-23 16:59:22</sys_updated_on>
+        <visualization/>
+        <w>23</w>
+        <widget_props/>
+        <x>0</x>
+        <y>15</y>
+    </par_dashboard_widget>
+</record_update>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="INSERT_OR_UPDATE">
+        <canvas display_value="">4d97803d63ff3c5e6de5d3b3ec8be731</canvas>
+        <component display_value="Column">2bd5dc19a7ad083941b7c992a966dd78</component>
+        <component_props>{"applyDateRange":false,"bareBorder":false,"chartVariation":"stacked","configVersion":"23.0.0-ci-SNAPSHOT","dataSources":[{"allowRealTime":true,"dataCategories":["group","simple","trend"],"id":"dGFibGV4XzIxNDAwNTZfbGFiX2VxXzBfYm9va2luZzE3ODQ4MjU2NTc2MDg2NjUzMjUyNC45NTY2NjQ0NA==","isDatabaseView":false,"preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"sourceType":"table","tableOrViewName":"x_2140056_lab_eq_0_booking"}],"dateFormat":"default","disableTooltip":false,"emptyStateAlignment":"vertical-centered","emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateHeading":"No data available.","emptyStateIllustration":"no-data","enableCustomEmptyState":false,"enableDrilldown":true,"extensionType":"bar","filterConfigurations":"@state.parFilters","followFilters":true,"hideMatrixAggregate":false,"hideYAxis0":false,"hideYAxis1":true,"hideYAxis2":true,"hideYAxis3":true,"hideYAxis4":true,"legendExpandToFit":true,"legendHorizontalAlignment":"center","legendPosition":"bottom","lineStrokeWidth":"2","metrics":[{"aggregateFunction":"COUNT","axisId":"primary","dataSource":"dGFibGV4XzIxNDAwNTZfbGFiX2VxXzBfYm9va2luZzE3ODQ4MjU2NTc2MDg2NjUzMjUyNC45NTY2NjQ0NA==","id":"ZEdGaWJHVjRYekl4TkRBd05UWmZiR0ZpWDJWeFh6QmZZbTl2YTJsdVp6RTNPRFE0TWpVMk5UYzJNRGcyTmpVek1qVXlOQzQ1TlRZMk5qUTBOQT09MTc4NDgyNTY1NzYwOTI4MDkyNzg4LjM5ODE4NDcz","transforms":[{"transform":{"transform":"Reference","name":"chart-subjects"}}],"numberFormat":{"customFormat":true,"rounding":"HALF_UP","decimalPrecision":0,"abbreviationEnabled":false,"numberInTooltipsEnabled":true,"thousandSeparatorEnabled":true}}],"newReporting":false,"numberOfPeriods":2,"refreshFrequency":false,"scoreType":"latest","headerTitle":"Monthly Bookings","showHeader":true,"showBorder":true,"showComment":false,"showConfidenceBand":false,"showDataLabels":false,"showDataPassthrough":false,"showFilterIcon":true,"showFirstGroupAggregate":false,"showForecast":false,"showForecastRange":false,"showHeaderSeparator":false,"showLegend":true,"showLegendValue":false,"showSecondGroupAggregate":false,"showSubAggregate":false,"showTarget":false,"showThreshold":false,"showTotalAggregate":false,"showContinuousLine":true,"enableAddZerosAtApi":true,"showMarkers":false,"showTrend":false,"showXGrid":false,"showYGrid":true,"sortBy":"value","sortByOrder":"desc","telemetry":"null","trendBy":{"trendByFields":[{"field":"sys_created_on","metric":"ZEdGaWJHVjRYekl4TkRBd05UWmZiR0ZpWDJWeFh6QmZZbTl2YTJsdVp6RTNPRFE0TWpVMk5UYzJNRGcyTmpVek1qVXlOQzQ1TlRZMk5qUTBOQT09MTc4NDgyNTY1NzYwOTI4MDkyNzg4LjM5ODE4NDcz"}],"trendByFrequency":"month"},"wrapTitle":false,"yAxis0Position":"left","showDataTable":false,"colorConfig":{"type":"colorsPerMetric","values":[{"metric":"ZEdGaWJHVjRYekl4TkRBd05UWmZiR0ZpWDJWeFh6QmZZbTl2YTJsdVp6RTNPRFE0TWpVMk5UYzJNRGcyTmpVek1qVXlOQzQ1TlRZMk5qUTBOQT09MTc4NDgyNTY1NzYwOTI4MDkyNzg4LjM5ODE4NDcz","color":"de699435d7033100b4964ebfae610331"}]},"yAxisStyle":"default","userInfo":"@context.session.user","showClosestSeriesOnHover":false,"cacheExpirationTime":0,"period":"M","showLoadingIndicator":false,"useDataCache":false,"showFilterAsSeparateSeries":false,"showMetricLabel":false,"showCacheTime":true,"showSparkline":false,"allowAdditionalGroupByPerMetric":false,"yAxis3Position":"right","lineClamp":1,"allowChangeDateRange":false,"useCurrentDateForEnd":false,"showGapPercentage":false,"headerTitleAlignment":"start","yAxis4Position":"right","showPercentageOfTotalInTooltip":true,"autoAggregatePeriods":false,"emptyStateHeadingLevel":3,"showMaximumRange":false,"showAdditionalGroupBySelector":false,"showChange":false,"yAxis1Position":"right","hideDevSettings":false,"showChangeFrom":"previous","showExportOptions":true,"showRefresh":true,"enableRealTimeUpdate":false,"showAbsolutePeriod":false,"enableClickAndStay":false,"showChangePercentage":false,"showDateRangeByDefault":false,"yAxis2Position":"right","headingLevel":2}</component_props>
+        <h>17</h>
+        <name>Monthly Bookings</name>
+        <required_translations>[{"comment":"","message":"Monthly Bookings","code":"PAR_DASHBOARD.4d97803d63ff3c5e6de5d3b3ec8be731.254091cf40c72db5d09b050580ba2c55"},{"comment":"","message":"No data available.","code":"PAR_DASHBOARD.4d97803d63ff3c5e6de5d3b3ec8be731.254091cf40c72db5d09b050580ba2c55"},{"comment":"","message":"There are no scores available for the selected criteria. Contact your admin for more info.","code":"PAR_DASHBOARD.4d97803d63ff3c5e6de5d3b3ec8be731.254091cf40c72db5d09b050580ba2c55"}]</required_translations>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-23 16:54:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>254091cf40c72db5d09b050580ba2c55</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Monthly Bookings</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name>par_dashboard_widget_254091cf40c72db5d09b050580ba2c55</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-23 16:59:23</sys_updated_on>
+        <visualization/>
+        <w>47</w>
+        <widget_props/>
+        <x>0</x>
+        <y>28</y>
+    </par_dashboard_widget>
+</record_update>

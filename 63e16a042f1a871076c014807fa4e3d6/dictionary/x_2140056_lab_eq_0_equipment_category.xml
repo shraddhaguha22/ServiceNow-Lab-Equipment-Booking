@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="63e6e6002f5a871076c014807fa4e36e" label="Equipment Category" max_length="40" name="x_2140056_lab_eq_0_equipment_category" type="collection">
+        <element display="true" label="Category Name" mandatory="true" max_length="100" name="category_name" type="string"/>
+        <element default="give description" label="Description" max_length="500" name="description" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Inactive" sequence="1" value="inactive"/>
+                <element inactive_on_update="false" label="Active" sequence="0" value="active"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

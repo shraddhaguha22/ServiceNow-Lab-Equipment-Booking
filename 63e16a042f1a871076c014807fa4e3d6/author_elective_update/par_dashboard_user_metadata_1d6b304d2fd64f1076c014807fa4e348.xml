@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_user_metadata">
+    <par_dashboard_user_metadata action="DELETE">
+        <background_color/>
+        <cache_expiration_time>0</cache_expiration_time>
+        <card_bg_image/>
+        <created_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</created_by_user>
+        <created_on>2026-07-23 16:26:59</created_on>
+        <dashboard display_value="Lab Equipment Booking Dashboard">d56b70412fd64f1076c014807fa4e374</dashboard>
+        <edit_locked>{"sysId":"6816f79cc0a8016401c5a33be04be441","name":"System Administrator","avatar":"a5d3c898c3222010ae17dd981840dd8b.iix?t=small","lockedOn":"1784824341595"}</edit_locked>
+        <enable_data_cache>false</enable_data_cache>
+        <include_custom_insights>true</include_custom_insights>
+        <include_insight_sentiment>true</include_insight_sentiment>
+        <include_key_contributors>true</include_key_contributors>
+        <include_kpi_signals>true</include_kpi_signals>
+        <include_predictive_target>true</include_predictive_target>
+        <include_predictive_thresholds>true</include_predictive_thresholds>
+        <include_process_mining>true</include_process_mining>
+        <include_severity>true</include_severity>
+        <include_target>true</include_target>
+        <include_thresholds>true</include_thresholds>
+        <include_trends>true</include_trends>
+        <include_widget_notification>true</include_widget_notification>
+        <last_deactivated_on/>
+        <last_updated_on>2026-07-23 16:26:59</last_updated_on>
+        <po_project_id_list/>
+        <refresh_information>false</refresh_information>
+        <refresh_interval>-1</refresh_interval>
+        <requested_by_user/>
+        <schedule_repetition>false</schedule_repetition>
+        <show_ai_insights_panel>true</show_ai_insights_panel>
+        <show_insights_panel>true</show_insights_panel>
+        <sys_class_name>par_dashboard_user_metadata</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-23 16:26:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1d6b304d2fd64f1076c014807fa4e348</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name>par_dashboard_user_metadata_1d6b304d2fd64f1076c014807fa4e348</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-23 16:32:21</sys_updated_on>
+        <updated_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</updated_by_user>
+        <use_custom_tab_colors>false</use_custom_tab_colors>
+        <widgets_margin>$now-global-space--sm</widgets_margin>
+    </par_dashboard_user_metadata>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</application>
+        <file_path/>
+        <instance_id>12b321ccff0a43d0c80bf8e4fc4fd9f7</instance_id>
+        <instance_name>dev427596</instance_name>
+        <name>par_dashboard_user_metadata_1d6b304d2fd64f1076c014807fa4e348</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_user_metadata"><par_dashboard_user_metadata action="INSERT_OR_UPDATE"><background_color/><cache_expiration_time>0</cache_expiration_time><card_bg_image/><created_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</created_by_user><created_on>2026-07-23 16:26:59</created_on><dashboard display_value="Lab Equipment Booking Dashboard">d56b70412fd64f1076c014807fa4e374</dashboard><edit_locked>{"sysId":"6816f79cc0a8016401c5a33be04be441","name":"System Administrator","avatar":"a5d3c898c3222010ae17dd981840dd8b.iix?t=small","lockedOn":"1784824341595"}</edit_locked><enable_data_cache>false</enable_data_cache><include_custom_insights>true</include_custom_insights><include_insight_sentiment>true</include_insight_sentiment><include_key_contributors>true</include_key_contributors><include_kpi_signals>true</include_kpi_signals><include_predictive_target>true</include_predictive_target><include_predictive_thresholds>true</include_predictive_thresholds><include_process_mining>true</include_process_mining><include_severity>true</include_severity><include_target>true</include_target><include_thresholds>true</include_thresholds><include_trends>true</include_trends><include_widget_notification>true</include_widget_notification><last_deactivated_on/><last_updated_on>2026-07-23 16:26:59</last_updated_on><po_project_id_list/><refresh_information>false</refresh_information><refresh_interval>-1</refresh_interval><requested_by_user/><schedule_repetition>false</schedule_repetition><show_ai_insights_panel>true</show_ai_insights_panel><show_insights_panel>true</show_insights_panel><sys_class_name>par_dashboard_user_metadata</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-07-23 16:26:59</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>1d6b304d2fd64f1076c014807fa4e348</sys_id><sys_mod_count>2</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package><sys_policy/><sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope><sys_update_name>par_dashboard_user_metadata_1d6b304d2fd64f1076c014807fa4e348</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-07-23 16:32:21</sys_updated_on><updated_by_user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</updated_by_user><use_custom_tab_colors>false</use_custom_tab_colors><widgets_margin>$now-global-space--sm</widgets_margin></par_dashboard_user_metadata></record_update>]]></payload>
+        <payload_hash>821039525</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>3fe16a042f1a871076c014807fa4e3d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-23 16:32:21</sys_created_on>
+        <sys_id>08acfccd2fd64f1076c014807fa4e3a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19f8fd225170000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-23 16:32:21</sys_updated_on>
+        <type>PAR Dashboard Metadata</type>
+        <update_guid>c4acfccd24d64f1032941eacf2ff10a6</update_guid>
+        <update_guid_history>c4acfccd24d64f1032941eacf2ff10a6:821039525,b39cfccd41d64f1071f14b9071ad9ba1:-1890123854,9d6b304de0d64f10b301bc95bc38354b:1615748138</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">dbcc34012f1a4f1076c014807fa4e3ed</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-23 16:33:08</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_user_metadata">par_dashboard_user_metadata</sys_db_object>
+        <sys_id>4e43737197ef4f32a48cf46e8a9a7401</sys_id>
+        <sys_metadata>1d6b304d2fd64f1076c014807fa4e348</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_scope_delete display_value="">25c21ebeec5742afa59f41f8f7284b41</sys_scope_delete>
+        <sys_update_name>par_dashboard_user_metadata_1d6b304d2fd64f1076c014807fa4e348</sys_update_name>
+        <sys_update_version display_value="par_dashboard_user_metadata_1d6b304d2fd64f1076c014807fa4e348">08acfccd2fd64f1076c014807fa4e3a7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-23 16:33:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

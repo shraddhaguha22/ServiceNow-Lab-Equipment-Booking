@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=45275000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>lab_equipment_booking_flow</internal_name>
+        <label_cache>[{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.requested_by","label":"2 - Create Record➛Booking Record➛Requested By","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"requested_by","choices":null,"usedInstances":{"ee37fc0f-45df-47e5-a04a-e343a70a9a75":["record"],"681ccacb-6e1f-46ed-bf4e-6f5015ed442d":["record"],"66c6c099-fb4b-4433-9450-41112140489c":["recipients"]},"attributes":null},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.Equipment","label":"1 - Get Catalog Variables➛Equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"Equipment","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"015ad7cc-e942-4b3d-b786-caa1b665dab6":["record"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["equipment"],"55e19531-a1bf-4fb3-89be-f953f7509a1e":["record"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1.record","label":"4➛Booking Record","reference":"x_2140056_lab_eq_0_booking","reference_display":"Booking Record","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record","label":"2 - Create Record➛Booking Record","reference":"x_2140056_lab_eq_0_booking","reference_display":"Booking","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"],"06b2f648-b7b6-41bc-81f7-f1d11b6dc46c":["booking"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"015ad7cc-e942-4b3d-b786-caa1b665dab6.approval_state","label":"2➛Approval State","reference":null,"reference_display":null,"type":"choice","base_type":"choice","parent_table_name":null,"column_name":null,"choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"System Administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"d9733aab-9037-4459-a256-27dfd4e193bd":["approval_conditions"],"015ad7cc-e942-4b3d-b786-caa1b665dab6":["approval_conditions"]},"attributes":null},{"name":"Service Catalog_1.request_item.request","label":"Trigger - Service Catalog➛Requested Item Record➛Request","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"request","choices":null,"usedInstances":{"06b2f648-b7b6-41bc-81f7-f1d11b6dc46c":["approver"]},"attributes":null},{"name":"cb67e54c-61d8-411a-8402-3282d7aebc2f.equipment.sys_id","label":"1➛equipment➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_2140056_lab_eq_0_equipment","column_name":"sys_id","choices":[{"label":null,"value":null,"order":0}],"usedInstances":{"e47e5718-8a04-4473-b266-e3e528b40737":[null]},"attributes":null},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.equipment","label":"2 - Create Record➛Booking Record➛Equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"Equipment","type":"reference","base_type":"reference","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"equipment","choices":null,"usedInstances":{"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"]},"attributes":null},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.equipment.equipment_id","label":"1➛equipment➛Equipment ID","reference":"","reference_display":"Equipment ID","type":"string","base_type":"string","parent_table_name":"x_2140056_lab_eq_0_equipment","column_name":"equipment_id","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{},"attributes":null},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.equipment","label":"1➛equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"equipment","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.return_date","label":"1 - Get Catalog Variables➛return_date","reference":"","reference_display":"return_date","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["return_date"]},"attributes":{"catalogType":"10","catalogTypeLabel":"Date/Time"}},{"name":"cb67e54c-61d8-411a-8402-3282d7aebc2f.equipment","label":"1➛equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"equipment","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"],"d9733aab-9037-4459-a256-27dfd4e193bd":["record"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["requested_by"],"015ad7cc-e942-4b3d-b786-caa1b665dab6":["record"],"cb67e54c-61d8-411a-8402-3282d7aebc2f":["requested_item"],"7b8abc04-2b12-4d24-a548-b5bc68200672":["requested_by","equipment"],"5c84939c-1911-4167-8d40-1a5e84651f9d":["requested_item"],"7bc4c5a3-575c-417d-9d9f-1a08a5a77b33":["condition"],"55e19531-a1bf-4fb3-89be-f953f7509a1e":["record"],"681ccacb-6e1f-46ed-bf4e-6f5015ed442d":["record"],"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2":["requested_item"]},"attributes":{"default_search_field":"number"}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.number","label":"2 - Create Record➛Booking Record➛Booking Number","reference":"","reference_display":"Booking Number","type":"string","base_type":"string","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"number","choices":null,"usedInstances":{"8e28068e-e970-4c25-bf0a-05420ff16f49":["booking"]},"attributes":null},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for","choices":null,"usedInstances":{"7b8abc04-2b12-4d24-a548-b5bc68200672":["requested_by"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["requested_by"]},"attributes":null},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.booking_date","label":"1 - Get Catalog Variables➛booking_date","reference":"","reference_display":"booking_date","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["booking_date"],"63eaf33c-f729-48f3-b80c-21c184575d97":["approval_date"]},"attributes":{"catalogType":"10","catalogTypeLabel":"Date/Time"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.equipment.sys_id","label":"1➛equipment➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_2140056_lab_eq_0_equipment","column_name":"sys_id","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{},"attributes":null},{"name":"Service Catalog_1.table_name","label":"Trigger - Service Catalog➛Table Name","reference":null,"reference_display":null,"type":"table_name","base_type":"table_name","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"e47e5718-8a04-4473-b266-e3e528b40737.Record","label":"5➛Equipment Record","reference":"x_2140056_lab_eq_0_equipment","reference_display":"Equipment Record","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5c84939c-1911-4167-8d40-1a5e84651f9d.equipment","label":"1➛equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"equipment","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"5c84939c-1911-4167-8d40-1a5e84651f9d.equipment.sys_id","label":"1➛equipment➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_2140056_lab_eq_0_equipment","column_name":"sys_id","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{},"attributes":null},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.purpose","label":"1 - Get Catalog Variables➛purpose","reference":"","reference_display":"purpose","type":"multi_small","base_type":"multi_small","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["purpose"]},"attributes":{"catalogType":"2","catalogTypeLabel":"Multi Line Text"}}]</label_cache>
+        <master_snapshot>ed15ffd02f524b1076c014807fa4e355</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Lab Equipment Booking Flow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>5d2533142f524b1076c014807fa4e36e</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 20:29:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c9dfdb982f9e0b1076c014807fa4e3a9</sys_id>
+        <sys_mod_count>118</sys_mod_count>
+        <sys_name>Lab Equipment Booking Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name>sys_hub_flow_c9dfdb982f9e0b1076c014807fa4e3a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:50:22</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>f169ebe82f9e8b1076c014807fa4e3f7</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_variable_value action="DELETE" query="document_key=c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_flow_catalog_trigger action="DELETE">
+        <active>true</active>
+        <catalog_item/>
+        <name/>
+        <published_version/>
+        <run_flow_in/>
+        <sys_class_name>sys_flow_catalog_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 22:03:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5d2533142f524b1076c014807fa4e36e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:06:05</sys_updated_on>
+        <trigger_definition/>
+    </sys_flow_catalog_trigger>
+    <sys_trigger_runner_mapping action="DELETE" query="identifier=c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT IN89dfdb982f9e0b1076c014807fa4e3ac"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>c9dfdb982f9e0b1076c014807fa4e3a9</id>
+        <name>Lab Equipment Booking Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 20:29:58</sys_created_on>
+        <sys_id>89dfdb982f9e0b1076c014807fa4e3ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 20:29:58</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=89dfdb982f9e0b1076c014807fa4e3ac"/>
+    <sys_hub_flow_input action="DELETE" query="model=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT IN6150a31c2f9e0b1076c014807fa4e323,e850631c2f9e0b1076c014807fa4e368"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</model>
+        <model_id>c9dfdb982f9e0b1076c014807fa4e3a9</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c9dfdb982f9e0b1076c014807fa4e3a9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 20:32:11</sys_created_on>
+        <sys_id>6150a31c2f9e0b1076c014807fa4e323</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:50:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=6150a31c2f9e0b1076c014807fa4e323"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</model>
+        <model_id>c9dfdb982f9e0b1076c014807fa4e3a9</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c9dfdb982f9e0b1076c014807fa4e3a9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 20:32:07</sys_created_on>
+        <sys_id>e850631c2f9e0b1076c014807fa4e368</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 21:29:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=e850631c2f9e0b1076c014807fa4e368"/>
+    <sys_hub_flow_output action="DELETE" query="model=c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT INeb87b3582f524b1076c014807fa4e3c3"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <generation_source/>
+        <name>Service Catalog</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 22:13:37</sys_created_on>
+        <sys_id>eb87b3582f524b1076c014807fa4e3c3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 22:21:42</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/61T32vbMBD+V4KeNvDATtZm8dsYFALdCk3Xl1KMIp0SMVlyJdmtF/q/7y62k7TzxqB70/38vrv7dLdjhq/BsJxd13ZyYdzjZGlZwrSN4C03N20FGBRbpwWgv3tc6hBZfrdjagUPNVgM5R+yhKlbbmrKX3PxY+NdbSXWqMsTCEUQ2k6OGZN3EhSvTXxPucuSb6gDvVdgQESQLFfcBEDP93BqfdUhaLvpHc/Jn/ko5+HvfF5mvIHFfcJKbiWPzrfHJO/KGygrwyMcnM5L8CzP0jRhDRFdtWEpO1TLS8L3tS2IYaHpKE0/DT6lDtisvT16xFYb6cHiXZBCxT12iNR/9yqkCeI8XaRiPl3M59N0NktTdbZWQgkx/5Sl59nZAhuOC2OUWHylktPJ4CmClScL+307Hri8subo2KL8uqlK/hT0T2z+MaU8Bb67LsUOZtFvY1gEsQh7fZp/V14zJt1+kJS0NdbrhWqaMbENqyBd9Ghf/j/B7M0Ep0SwW91VFbVDsbAZnZavDdWENnQH9yCwpIhebzZYiEXO1KX9NqaLnv2JSuuA14KKFEEnHr7Hauser4dzXmi7p9QHjRPcHCweEXldR9rfjnHZcKwgRUePGM97VRQPNVXs/8mAVewnooQgvK7iZxF1A4dP+wt8tA/9CQUAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT IN1bdbbde02f528b1076c014807fa4e302,229df9242f528b1076c014807fa4e32f,24b262ec2f568b1076c014807fa4e37c,560523a02f9e8b1076c014807fa4e38e,6efa39e02f528b1076c014807fa4e31c,a2ab7d242f528b1076c014807fa4e3b8,ec89f9202f528b1076c014807fa4e304,eddcb1e42f528b1076c014807fa4e3dc"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 07:51:42</sys_created_on>
+        <sys_id>1bdbbde02f528b1076c014807fa4e302</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:31:11</sys_updated_on>
+        <ui_id>ebf0e30a-8514-45ef-a052-dd64e0ea54bf</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VUW2/aMBT+KyjPIXJICJS3TRvay1ppnfrSFcuxT8Cqc8F2KBniv+84DqzrhlRNk6bmzd+5fd+55P4QSBEsgiwGMr2KM57ESTIhZDJP4zxL8ngiEgaQBmFQsRLQ07JcAe0fYbBjqnXgnk7ilJBpRhXLKWwpoXldP8pqTTfS2Fp36CykaRTr7oaY995h9OnswDdSCQ1VsLh/CIOGaSxiQQeLwwuT7RpwlUBhnq+O0OjaE3qtmF+CL4hzVV5itRaOEAkD2FuoBGC9gikDYVCySrBeycLqFgENTNxUqjt7bGRlMWHgfPdGfsfsc+L8CkBpHLzt/KRDwzzMN7XkcNNYWVce6YkNxlq1ZXXtRbhWQ8FaZU+tRqQ1mA8aR9mRGBgVt5v66cup4FJWvbrBqGrO1PnFrNUyby0YNw9QUGIiWrKmcVNudL2TfTByKaO1wkdUqPoJixq5riLGHfEIO8SiJeIfeviOaelUfMY0GHzs1dNt6+p6HQNj6kWjg+FaNvYdptvBQO4YnrZYALm6OPg4/znofnHNsw0e1vVbS0giDoc4TdIZZPOxIDwfp2yejnM2TcZXYiZmxTwHweNIA8d9OB5XXpyPRSXYCxArDSXTj8ajH7etbFzHRm7tQYxuW87BmKJVqluh9qLWJQiad95/SEmxX+CR3w/oLVD+y5OGEoVaGHmp4aune0qwlKCE+cO4Tzc9FKC7ocBw1/G/uus4I/33f67b83xjx/3sP3vhzB9+AEZZHb+uBgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=1bdbbde02f528b1076c014807fa4e302"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>3a0d9a7b-bb38-41b5-b6cc-b6ae3bb20d25</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 07:59:17</sys_created_on>
+        <sys_id>229df9242f528b1076c014807fa4e32f</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:31:12</sys_updated_on>
+        <ui_id>357de864-37fc-4714-ae7b-810307e3e35c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VU30/bMBD+Vyw/bayEJIUOuqdKjO1ho9JAvFAWOc6l9eTYwXZKO9T/fWcnKT8GE5qQpvWl8v347ru773J5S0VBx3SUQHxwlIz4MBkO0zhOD/eTfDTMk7QYMoB9OqCKVYCRjuUSsvAY0CWTjTeusjTZj+ODUSZZnsF1Fmesro1Gfyb1HCMLYWvJ1hddwqTzki/ByxdCFgYUHV9eDWjNDMI7MHR8+8jl1jX4GiAR5NxTIactlZe28SD5mbZ8lcc2bQpPKB5QWDlQBWC9kkkLA1oxVTCnzZqOnWnQYIAVUyXX24iFUA4BqY9dWfET0Q9jH1cCtsah9W2fWTet1swXWnCY1k5o1VoCsc6pZVOp07YJP2coWSNdP2e0NBbxoPaUPYmOUXm20Dff+oInQoXuOqfUnMntizlnRN44sH4fIKFCoKzCBQs1z/weRUhGLlU0l/iISqlvsKgVcxUx7olHOCEWnaD9OJgvmBG+i68Ig8mb0H123fi6bR8d46xtGgMsN6J2E4RbQkduM+j1W0B89Ozik/xu0UGy9p52C+DCIsNZE8dDVNoP4A6K71v9InFofWmcjnbj97tp2nnBtI7f9f06oH95FlAhFQekJTN48YR6gBMBsrBPjKy/i65AtuwKdLeRvNZtJKM4/P7NhbQ8/7MDufetevpUeqOn+ECG3vDHeLq3M1M7OxPOwVriGe5NAmXiKZPGYpfELYCURRYsOvdyj8hZACBVYx0x4BqjCCNBMxHxiFMvG6KaKsc/YYkuSwuO5GvyLiFCkY/GaEM+o4KkL3EG7aACmSUTMnz+ddi6JZ0gSFMjsdogVZ8zo9GMElbi1fT0fDqsGEoYxsjGELvQxuHQOWkPrw+McKvzOZiINwZF4KIQ6LcW+sKqHzxW19kWxRv3ZkrBDfnkd32MMz4XFbx5i1uzbAlFL72706ebzebqF+6DyfiMBwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=229df9242f528b1076c014807fa4e32f"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 10:41:21</sys_created_on>
+        <sys_id>24b262ec2f568b1076c014807fa4e37c</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:44:33</sys_updated_on>
+        <ui_id>e47e5718-8a04-4473-b266-e3e528b40737</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1X227jNhD9FUHPtktdLNl5KzZrYIG2AXbTvGwXBEVSMVGaVCgqiWPk30vqZsdWbPkSdAv0yTA51zNnZqjvK5cR98odEzBNp9PxJAYgCACIogAjL0mCCCcgSTx34Aq0oEYyl0pDvcyoOXpEvGjPUI7NEWF5xtHyrr5BjpbOiznHc8aJosK9+v5j4GZIGWuaKvdqtXVlTUOOEsqN+qe5ZNh66htko/jNROTcVlF2BF7+XBnPtXmpiI0lGLj0WVNBqHGXIp7TgbtAgiAt1bI9URSRG8HXB3MmtLHmWuHnnL0Y04Fv5VJq0sK0umv/whqj6riKITfJr9roW9Q6AK5DBa+DtfyLlUfb8oRuKnivBlxCU1Rw/ek0n96xPn3rs0rwJtNMmhK7gYUfJbxGBUteLMQfVYncNsK7DmZVN9fvEKzIDbA0s8Wz1ahLk36by6evDfIzJsq46ksuMeLtP6S1YkmhLS4rNyUwZZQTyARnwnrSqrBUoZwujAe4QFnGxD3MlHxkpVWTy2J0z82fUcrlk8WC3YsRwjbzkSERGs3M+XV5fIcUsyj8bswY5YF1ODeqtT+YY8UyDZ8Yuad67b2RIlI/If53133NrraHyvTc15KA8KGwGVdA11jBsixWoPL5q4n3kdaw2IqXveft7T1EtvqsKusmO6jJl0NRLJIy3a05sX192riY2Yo5JZkGvcNulG8sZ51k+V4m9cyoWCEqHw3PLzY3JuC4udG21VFdtdsulj5ndMsHNkVXFx4ic4XEIUZP926T6ZoHLIULgx7LOIWKYlP0HCJFYSoLQWCVygbVLbQpU7muhXfZ/pXqQglHGjI4ek6dUtpppS+xK3tk1yh+SZ0mvTqG3DHpOWV6TpvecWC8s2HDi3VKeGSnvN12M8R4CX2uabZRO6qUVO9s2QNV21P+niu4Z1DeRYM6f0d38b1zVx+I9cIb/GNm0rl7FFOUhD6K4sDzAPAAicEkjr1JlKQRisN03WgQ5gKbRW8sp4YYxjxsiNBUFeyOlmrbnzpDbs10/WVWm+gbb6N8LcVfBQB+rB0bsKmz0wR8OKV6XiRScorEmp7jf21gXGq1nsvjgt1uY1Md/dZVtI/axAX7U7CHgn6xpJhQ4E88goeT2IuHYUqi4ZSg8RBNk3EcEIrD9PwXJxnvfbpt7GcsBWE2i3zzwbnMISOWkAFZrXASxXQc4mHkkckw9Dw0nITAHwb+xCcxogn20xF9KFhm0RtVyq+vHQ/VC5k9ccdvZtoXpU7lLuianb151uycC7Yh+P+N23+f9HrKkr2PPRSu612ZW3fJM/Q9U5FxZCkG6QMEsKXrLvk/b1yduGCs/zdfaD1if6O8m0tN2/Lv1ocZ+M9/mP2cryATEOOm2rACPZeFKlF5hJgXeXmhkMjrr4FTN8GPfwCvUNWZnhQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=24b262ec2f568b1076c014807fa4e37c"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id>d99b275d-5215-47f0-93e1-bbf043777cba</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 15:31:11</sys_created_on>
+        <sys_id>560523a02f9e8b1076c014807fa4e38e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:50:11</sys_updated_on>
+        <ui_id>cb67e54c-61d8-411a-8402-3282d7aebc2f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VV227aQBD9FcvPCNmAIeGtt0iV2kYKVV6iaLWXMay6vmR3DaGIf++svQYCgaAokar20bNzO2dmju9WoRThOGRpxGifMt6Po7gfRb2LQcyGfRb3RJ8C0LAT5jQD9NTwUIGxIIi0kKF9TlXlHlarCei55BB8opaqYkrirneuXddrdBbSlIoub30MWvhMKqEhD8d3952wpBrLWNDheLX3ZJclEEUZKAy8gRTwhQNmOBdAGzupWCYtIghumvZOgHNFa/u2XKGFay/qhPBoIReA5VOqDHTCjOaC2kIvw7HVFRo0UHGdq+XGYyZz2+DO6KORvzF5v9fZyT8ODSfYRtvA5oV46mrwvsvga+PEZwXyfl1aWeRNdkuZagkuVJXlPxqAbgSQ0krZnRFUBrND6bC47nyr6WRWLDY8X8m8hu0fVcGp2nxRa7VklQXjxgYKMkxEMlqWMp+SUhdzWQdjL1l3qvCjm6pigUWNnOZdyl3jXaSOdq/Q/rk231ItHYrvmAaDkXgkkghdlKUH5zgO1zVH5KFy/TT4PBLSkIEOhmtZ2g9YZg6+6XWn3Xx2anHSeLscyDUOwALhfr/3DiBNhzRhCe+lCUQsjkZDHsWDi2iU0gH0hThcfz/I4BtlwZeHSpaOtze8iZehtbE/Pbb2duvNMgHuc9DOIZiANS+zcfxi4ne7GEvM0jxpxBBMTOa+dWKa1p87ppcB/x/XJQ3KTlbgQGt0ZJfg+tDcKATaq9zKDEi99UTmpCjNXMJi62YQGTJONZ+91ZGOTm/yaLuW7RK0ozc7BzoYMnHJkkEvvXzmQJNk7DYH8Ti+SA6LzjCJIE4vjwQAPwhgdIgVRHQkgB0E4LbwpB8fqRCL/YBDDfk3QL1O8SaqMrPgY8V/gW1F74xVacPb07/d2ZUTa+SVzbiirK3pta13Wtu85Rxxi3tRFD3VtyPK9ddJE0pIir8EpGHLG84XalLCOgSLvpeAnalOMueqQs8MqZAaq2xadWq/cXPU7DQBmix0U2njUmqM0XP3d1HAbQ2ylcCi0twrKVr39/21cnj/BwEfWxGvCwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=560523a02f9e8b1076c014807fa4e38e"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 07:47:49</sys_created_on>
+        <sys_id>6efa39e02f528b1076c014807fa4e31c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:31:11</sys_updated_on>
+        <ui_id>14347e68-d0cb-4a84-ba53-9d7d7f8bedc1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91UTY/aMBD9K8jnEDkE2IVbv7h1V+pWe9nuWo49AatOHByHhSL+e8eJA3RbpFVVqWpz83y8eW9mMg97oiSZk2kCdDJLpiJN0nRE6eh6nGTTNEtGMuUAYxKRkheAkY5nGlj7iMiG68Ybt2yUjCmdTJnmGYM1oywz5qsqlxgkVV1pvrsPsW+PDrFSWlooyfzhMSIVtwjqwJL5/oXL7SrwyKAx/7MnMLjpCLyW/A/JF8T4Ki9txkpPiEYEtg5KCVgv57qGiBS8lNwZuyNzZxs0WODyttS7Y8RKlQ4BiY/d1uobol9TH5cDShPQ+Y5PFhrVmcXKKAG3lVOm7CwtseA0uinKm06EbzHkvNGubzFamhrxoPKUPYnAKL9bmedPfcGFKlt1wamN4Pr44s5ZlTUOaj8P0FAgECt4VeHwWGXNRrXJyKWIlxofca7NMxat1bKMufDEY+wQjxdof9+a77lVXsVHhMHkQ6uerRtft9MRGLNONAbUwqrKvUG4DQRyh6jfWgl0dnHwSXYadLuo9dnGwrpRlZf0paE0lft9MqNCTK74UE7ybDgWV+Phtcj4cDrLJ2kuZJ5mo/hDn3U4PIUFZygROpAnC66x5bmlamxl6pN/jSwcSJbt+rp3YDc46ME77JQ2S5bEIYopB0V8SsmNxaq1466pu2RsIo4BV/Knf+w/U/ebhwIK7ImDQdeV6NU70wMsFGhZ/2KJ+ksRCrBNKBCuRfKnrkUype33d25Gx/MfOxln1/vC8Xj8Dk/cROn0BgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=6efa39e02f528b1076c014807fa4e31c"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 07:50:49</sys_created_on>
+        <sys_id>a2ab7d242f528b1076c014807fa4e3b8</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:32:27</sys_updated_on>
+        <ui_id>55e19531-a1bf-4fb3-89be-f953f7509a1e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTW/bMAz9K4XPjiF/xE1zG5AF2GEt0A29dIUgS3QiQJYdW0qTBfnvo/yRZO3aBUWHYcByCiny8T3ywfc7Twpv6pFIkPAqTHkcxnFESDRJwiyNszASMQMAz/c0KwAr10xZaDBu/2CiMczY5pslJBZWszWTimXKdQjZVIpt735byJdSiRq0N71/8L2K1TjKQO1Nd0+ezLYCil2gEO8rFAhv4KIb4J+tZACYS1Ci+YU0NwZj0w+g635AWQvHKiTE92BjQAvAkTlTDfhewbRgpqy33tTUFhM1MHGj1fZQsZTaIKznajeN/I4zwpS0P1edA+rk0FUcQtpvsUvzZSk53FRGlrrLmHaH3WOpbKGvOzFu/5Azq8ywf8zYBvGgcsQdlY5n/mVZPt4O8+ZStyJ7zqrkTB0iZkwtM2twS3gbUFAgDi1YVUm9oFVdrmXbjFSKYKEwCHJVPuLMRi50wLjjHeCaWDDH/KxN37FaOhGfEQab9614urJubiejJ0xbza1g2p4MSxtey8p8QOA19DT3fm/qBF61Qni8fA0cb3ti6t2OZ+kljBM+SkMxGSVhyEaThESjOJpE4pJBxqM8gJWVldvBfv/c72829qzk1oFefJoNrj5DytB9O2h5qq13tejRqRSnln4vRyf/vfwnvJyNXzMAvzre+wTz6OcNjcKEkHHqTEZhRQk9ePe5cz+ePL3x2+xIXFx3JM4V8FPzC4KGT/Nprvfw+N08PPlLHu4Z/WMmfsm6Dz8Aydd0LF0IAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=a2ab7d242f528b1076c014807fa4e3b8"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>d99b275d-5215-47f0-93e1-bbf043777cba</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 07:41:24</sys_created_on>
+        <sys_id>ec89f9202f528b1076c014807fa4e304</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:50:11</sys_updated_on>
+        <ui_id>015ad7cc-e942-4b3d-b786-caa1b665dab6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/bOgz9K4Gf01w5/oiTt2JFgQ67d0Db7aUpDFmmEw2K7Nlyt9wg/32UJSdu0mZBl6HbsJcAokTykDykpdytHJ46E2cUZUMYj4ckcQnxCIkCRiIPEm8UjjzKiNN3JF0AniyB5WWK6wcqai1YrW6gfOAMem+ooiKfxe6ghM81VCrmChbrNR5OeVUIuvxodVDC5lykJUhncnffdwpaonkFpTNZ7WypZQGxoAkIVLzIWb0AqXpXF2jjWOit9nWLfTcW7QPXqbUecy3ELY2H9B34qkCmgN4yKiroOwsqU6ryculMVFmjoASavpdiuTkx51KZQBf0a8X/R/PeUJ/LACNjNgmbZWwT1OYmx3y+LxTPpZEomog2cbmoF/I/E4FOLWS0FqqT2rpCe1BoyBqEQZjdzPMv162/Sy6b4CxakTMqNiuqVMmTWkGlqwECmpwsaFFwOYuLMn/gjTJCWQxmAheDTORf0GfFZ3JAmcY9wATRwSXKLxrxR1pyHcS/aAaV103w8eda+zVhWMBxE7MJGE9VrOSFOkebD2ARrvuWtQk7WHq2rbQxtyVtxWLkaMPPfXZeG/ZC2rsy+y/j6q322WsK1T8a7yPlffyWqM0ylsa05al7mKdWcgxRI/I6RLWIfjOmfo+k4IdegD+jzCPu0CURhFHExoSyKAwD39sWGf0hYiqQmrRC21u6nnCC3mDG5Kxl5BHgWsVzi6533aJ7FrZladW6sgwdnoyhbvibUrTmtzu5MZJ3u9X5OVzW7j5IjuPtSlc/HCbhmETpWZqR5MyPvOCMMiBnELoBBGnIAtf7Yf4T99DQS6MniJRxEN0rRrux3wadnZe1w6V29WhIH4F3ryUuLeDnArEN0Sx3xvbpmiIi5JW64s+9YbCDZIDO8P6U16U8wN14zqumpM9yuHPiVFw+An6r/Nbg36XyblgHmOz9ZfIvzGQ/OEgFeGJ6sVymXOOrOnw2Mw+qc7n8cLdaVYoqzgZh5IbZaMwYoRFxQ5+4LKCelwDxE/B9d72+3yf+j5h6WYds7zC1gKrtkiNSs3lBWr2DqbI9sr0XWSXbJ/6pHpSv1yZ/5k2dHeRBNt7WPa0xHVR1X5SrqWNATp3J1JG5hKnTnzr6VKwJ0YjxBILbbDSy1dqs65Jadbez3OqmdFk1Jys2hxQp1UgfSQzPrfyUf7vcWAe9C0T9zy3vfGG+n7PNfze10X8yje2ToY3E5I13vy/Byb4v/t+22XkUxJuLNH5OcAC9uJfuvwGVpe3pUhQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=ec89f9202f528b1076c014807fa4e304"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 07:55:57</sys_created_on>
+        <sys_id>eddcb1e42f528b1076c014807fa4e3dc</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:31:12</sys_updated_on>
+        <ui_id>63eaf33c-f729-48f3-b80c-21c184575d97</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VUW2/TMBT+K5Wf08hp0vTyNgn1CTYJ0F7GZjn2SWvhxJnjdC1V/zvHcdqNQaUJIRB587l933cuuTsQJcmS5AnQ6SLJRZqk6YTSyTxLijwtkolMOUBGIlLzCjDS8UID6x8R2XLdeeOOTZKM0mnONC8YPDLKeNNYg36mzRojpWobzfe3Q8LV4B29771io7S0UJPl3X1EGm6xvANLlodXLrdvwGOAxiKfPZXRdaDyVhk/JF+Q5VFe24yVnhCNCOwc1BIQr+S6hYhUvJbcGbsnS2c7NFjg8qbW+3PERtUOCxIfu2vVN6w+pz6uBJQmIPjOTzZ0K5jFxigBN41Tpg6WntjgNLqr6usgwvcZSt5pd+ozWroW60HjKXsSA6Py08Y8fTwBrlTdqxuc2giuzy/unFVF56D18wANFRZiFQ5Y1Wvm56j6ZORSxWuNj7jU5glBW7WuYy488Rg7xOMV2t/15ltulVfxActg8rFXzx47jxt0DIxZEI0BrbCqcVdYbgsDuWN02l8JdHFx8EnxPOh+ZdsXu1sY8xWFfOkoTeXhkGRpNoN8PpZUFOOMz7NxwafpeCFnclbOC5AiiS0I3Ifj8UGCUC3KC9lh50E+nJcfVUPw/XwDfw/4N88LKqTrYBQIR2/u9KnASoGW7S9af7qvAYBtB4DhxpI/dWNJTvvv31xa4PmfHdqLf96Fk7v/DgiTXQU0BgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=eddcb1e42f528b1076c014807fa4e3dc"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT IN2869abe82f9e8b1076c014807fa4e3a2,668d79282f528b1076c014807fa4e354,ac69abe82f9e8b1076c014807fa4e3a3,b9ca71282f128b1076c014807fa4e38f"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">3e692fe82f9e8b1076c014807fa4e388</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Top Level Try">e9060aa2c3013010ace8b740ad40dd51</logic_definition>
+        <order>0</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 15:50:11</sys_created_on>
+        <sys_id>2869abe82f9e8b1076c014807fa4e3a2</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:50:21</sys_updated_on>
+        <ui_id>d99b275d-5215-47f0-93e1-bbf043777cba</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">6f2cc2242fd28b1076c014807fa4e383</block>
+        <comment/>
+        <connected_to>8a6f1f14-c55a-438b-bcae-87292d7919d0</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id>d99b275d-5215-47f0-93e1-bbf043777cba</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 07:59:01</sys_created_on>
+        <sys_id>668d79282f528b1076c014807fa4e354</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:50:22</sys_updated_on>
+        <ui_id>3a0d9a7b-bb38-41b5-b6cc-b6ae3bb20d25</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">9f692fe82f9e8b1076c014807fa4e3d8</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Top Level Catch">35d60003e6022010a5e40cdd1254dd23</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 15:50:11</sys_created_on>
+        <sys_id>ac69abe82f9e8b1076c014807fa4e3a3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:50:23</sys_updated_on>
+        <ui_id>52e087b1-c468-4654-9a5a-8e96fe507ff1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1ZbW+jOBD+KyfUjylH3tN8q9qLlNO1lS7Z/XKskMFD4j0Hs2DSdqP89/UYA4G0vTab7t7pIlURzHiGmXkeZmy6sUQm40ymc3GZpmwRWeO/PrUsFqFMXW8sRq2x5YTDDumTTt9vdztO2/EHbSDqojsctYNh78JqWRFZgVrpeakkMks9T8nWhGco3LjWGpKUici1xq7Vth3XarlWIFYxh4c7/zMEUmk2KKKQX50F6+JCG30ma2JzEi3smUxYtNAeztZa51rbrbpbQZqSxYH222ZAs2AJK5L7mHBxfw1YH0jGk+vLq/n07nY2v5x/mNXidq1pJGEBicmPgn0WMuDUC0kAMs0Xzxg+5obEExRqs43rulbG5o8x/EF84Hg7xp/Cn4se1U8ChHoi4o/lipDwFEr9kkWyVJXS3HMpZw2nFEKScelpvPateS2iK0y1UJFAKlQ9SBKReDmVyoUyyaqFKxJRIkXyXNwioXlAWtfesXvwOEQLuSyVPQd/t+qvhrmqawWsEX9v9Y3HoxY/rft8U+1vTLbvXP7Oy+V3SgAQgRfeDftMqsxfVf03leFSp/3LTHea4xcjYx8i9iWDKa2SJjT0h35wfkEHw/PexYiej0bUOR/RQdCl/VEvBNoAvM4k0+SKJYHwdGmwa5ZrGo2lWAscVhBJb0XiWDHHixOxZrtwqbZlL7gS2aHCwqMaDDsvh60yJXaF0UeSMOJrBOJD2kqUcf4Uq0U9vze8zoN+g1ApqBA5+0ow/olIViTnye+zu1u1RM0VytKYk8ePp/FyGi+n8XIaL6fxchovRxwvwZJxmkBUnX+q8w023Z2Tzf4wqturs1RMEmUqIVEEbagydp0bY67K1jRO5UKjp1mpxNNSXARTaK7yaOqxyaYzXS1r3G5Z8CAhoqC86Pq3Kq6WEoTqTiFVChCb/Kmquin7qnz3HFwXgkokMDmXt56pR1EKwQK4i7HWuUQiPYxS8GwV3ebBYyXzl3SnkkZyvVfiLFUPghiTwehMqOFsKe7/LCKZsEjnbZRcBISXd0SqPulnEtQpd7PV8XtfMlyQP9e49vKw1YI0SFgssTWsofSSC9HDtrVHFTMk3o0teadvkmVWSJtcuSnD2YtPNhwawnSOSBjnRJk9yrwA9wY1Os76FxW939CzTXVYtNkZBrVO8cS0UnqcUxjZi4T8h7CbjD01sf8MIw9kVdlSfh6p3r3XHZNX/79e96kBTL4dLYB5xdfjwvA3pJbZeT/zUdkAKIpHFABi1Y8E4ejHQXhcpMyLu1ue+qtcArN7QlDy+tlA6Z87FegOfeh5wDpwapabK0qHTns0DILuAJBJ/X6/6w97DqE9h1IaVJSBCB9LdzZf7f2+pDvXG3ZgNY7PlfGvEwyv4PkroiuMq/D24jX89oXgQKL3IfiPmX2hKc7TbarQ/iv2ZdjB1oaraQ42hYDhN8U5yqbFP8RQ8agwY8Gu6F4kf+PLUMm23wB/NxwcWhsAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">262cc2242fd28b1076c014807fa4e33d</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id>d99b275d-5215-47f0-93e1-bbf043777cba</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 07:46:56</sys_created_on>
+        <sys_id>b9ca71282f128b1076c014807fa4e38f</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:50:21</sys_updated_on>
+        <ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4HOSSDbsfNxKzoUKNCtwFL0shUGLdGJUEXyLLlpFuS/j7KdpNhadBh63CWIHinyPYoP3jPb+Krx7s5eOKdWhi2+PQyZMgGj/3tWaru9sSslro3zYAQud+5asgUr5gKmUTyLS/opIj7NBI8mMz4tYYLJrGRDZmCDlCmskcora/IWGLIn0E0IXK5RPA4uqqq2BA2WHnzjKC6VqzTs7t9JE2ulZY095wpqqu6xZov9byG/qzDXUKCmaktfK7Oi6yqoKDmU0VxEIomzJOY8nk2iIkuKKJYJICSUd7x4eZQxuGmRt/WFfoS7Yydby0Ar4kOGzx6NRGpdgnY4ZBswErytdyekRpC3Rp+BtTKeyrGQ/OzUT6odp2lILJE0CuyCp2Pez6+DxdoqgbdVINghHgrd3xFWNxvzpdMRJo8lNNofJ09I46geVoF0YNFTKpdru/16bHilTCuwD2orQJ9O4GkMRePRhYdBjRsqlG+gqmg4eXhT1V4mLpvxStNhHHaOmoZ9HIMIxMc0IxhfEf6phe+hVkHFZypDlzuaBTgl8nZ3qZyvScKhHUv+owmEOoG9lLybBiU4UavKX1CfJ+xZH4Yfu/gvdn6/51EKcirECOeTeDQpEjkqprNsJABo9bJUQpGNod/2nHp7PBy+N5wnskNpe/7wyEeV/QhPzSEt04inr3tqkr3mqdeH9oaR4neMFJ7+L33EOf9vpJdGUi7vDNFra5v/s48ewuJ3HVy3NxKFckTkLmDXx+9MCOxoAYLbztDW1o9Bwhk7/AIZYSkYsQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_hub_flow_variable action="DELETE" query="model=c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c9dfdb982f9e0b1076c014807fa4e3a9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 20:32:12</sys_created_on>
+        <sys_id>3150a31c2f9e0b1076c014807fa4e331</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 20:32:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c9dfdb982f9e0b1076c014807fa4e3a9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 20:32:10</sys_created_on>
+        <sys_id>9d50a31c2f9e0b1076c014807fa4e304</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 20:32:10</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>lab_equipment_booking_flow</internal_name>
+        <label_cache>[{"name":"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1.record","label":"4 - Create Record➛Booking Record","reference":"x_2140056_lab_eq_0_booking","reference_display":"Booking","type":"reference","base_type":"reference","usedInstances":{"ebf0e30a-8514-45ef-a052-dd64e0ea54bf":["booking"],"63eaf33c-f729-48f3-b80c-21c184575d97":["booking"],"3935254c-58ff-4c1f-97ad-0085360a29f7":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.purpose","label":"1 - Get Catalog Variables➛purpose","reference":"","reference_display":"purpose","type":"multi_small","base_type":"multi_small","usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["purpose"]},"attributes":{"catalogType":"2","catalogTypeLabel":"Multi Line Text"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.return_date","label":"1 - Get Catalog Variables➛return_date","reference":"","reference_display":"return_date","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["return_date"]},"attributes":{"catalogType":"10","catalogTypeLabel":"Date/Time"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.booking_date","label":"1 - Get Catalog Variables➛booking_date","reference":"","reference_display":"booking_date","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["booking_date"],"63eaf33c-f729-48f3-b80c-21c184575d97":["approval_date"]},"attributes":{"catalogType":"10","catalogTypeLabel":"Date/Time"}},{"name":"015ad7cc-e942-4b3d-b786-caa1b665dab6.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"8a6f1f14-c55a-438b-bcae-87292d7919d0":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.Equipment","label":"1 - Get Catalog Variables➛Equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"Equipment","type":"reference","base_type":"reference","usedInstances":{"015ad7cc-e942-4b3d-b786-caa1b665dab6":["record"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["equipment"],"55e19531-a1bf-4fb3-89be-f953f7509a1e":["record"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for","usedInstances":{"7b8abc04-2b12-4d24-a548-b5bc68200672":["requested_by"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["requested_by"]}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.requested_by","label":"2 - Create Record➛Booking Record➛Requested By","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"requested_by","usedInstances":{"ee37fc0f-45df-47e5-a04a-e343a70a9a75":["record"],"681ccacb-6e1f-46ed-bf4e-6f5015ed442d":["record"],"66c6c099-fb4b-4433-9450-41112140489c":["recipients"]}},{"name":"Service Catalog_1.request_item.request","label":"Trigger - Service Catalog➛Requested Item Record➛Request","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"request","usedInstances":{"06b2f648-b7b6-41bc-81f7-f1d11b6dc46c":["approver"]}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.number","label":"2 - Create Record➛Booking Record➛Booking Number","reference":"","reference_display":"Booking Number","type":"string","base_type":"string","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"number","usedInstances":{"8e28068e-e970-4c25-bf0a-05420ff16f49":["booking"]}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.equipment","label":"2 - Create Record➛Booking Record➛Equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"Equipment","type":"reference","base_type":"reference","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"equipment","usedInstances":{"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"]}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record","label":"2 - Create Record➛Booking Record","reference":"x_2140056_lab_eq_0_booking","reference_display":"Booking","type":"reference","base_type":"reference","usedInstances":{"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"],"06b2f648-b7b6-41bc-81f7-f1d11b6dc46c":["booking"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"System Administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"d9733aab-9037-4459-a256-27dfd4e193bd":["approval_conditions"],"015ad7cc-e942-4b3d-b786-caa1b665dab6":["approval_conditions"]}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{"d9733aab-9037-4459-a256-27dfd4e193bd":["record"],"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"],"681ccacb-6e1f-46ed-bf4e-6f5015ed442d":["record"],"7b8abc04-2b12-4d24-a548-b5bc68200672":["equipment","requested_by"],"7bc4c5a3-575c-417d-9d9f-1a08a5a77b33":["condition"],"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2":["requested_item"],"015ad7cc-e942-4b3d-b786-caa1b665dab6":["record"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["requested_by"]},"attributes":{"default_search_field":"number"}},{"name":"Service Catalog_1.table_name","label":"Trigger - Service Catalog➛Table Name","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master>true</master>
+        <name>Lab Equipment Booking Flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Lab Equipment Booking Flow">c9dfdb982f9e0b1076c014807fa4e3a9</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 22:02:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ed15ffd02f524b1076c014807fa4e355</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:39</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=ed15ffd02f524b1076c014807fa4e355"/>
+    <sys_variable_value action="DELETE" query="document_key=ed15ffd02f524b1076c014807fa4e355"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=ed15ffd02f524b1076c014807fa4e355"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=ed15ffd02f524b1076c014807fa4e355^sys_idNOT INbd15ffd02f524b1076c014807fa4e356"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>ed15ffd02f524b1076c014807fa4e355</id>
+        <name>Lab Equipment Booking Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 22:02:51</sys_created_on>
+        <sys_id>bd15ffd02f524b1076c014807fa4e356</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 22:02:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=bd15ffd02f524b1076c014807fa4e356"/>
+    <sys_hub_flow_input action="DELETE" query="model=ed15ffd02f524b1076c014807fa4e355^sys_idNOT IN3515ffd02f524b1076c014807fa4e358,8615ffd02f524b1076c014807fa4e398"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</model>
+        <model_id>ed15ffd02f524b1076c014807fa4e355</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ed15ffd02f524b1076c014807fa4e355</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 22:02:51</sys_created_on>
+        <sys_id>3515ffd02f524b1076c014807fa4e358</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:25</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=3515ffd02f524b1076c014807fa4e358"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</model>
+        <model_id>ed15ffd02f524b1076c014807fa4e355</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ed15ffd02f524b1076c014807fa4e355</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 22:02:52</sys_created_on>
+        <sys_id>8615ffd02f524b1076c014807fa4e398</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=8615ffd02f524b1076c014807fa4e398"/>
+    <sys_hub_flow_output action="DELETE" query="model=ed15ffd02f524b1076c014807fa4e355"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=ed15ffd02f524b1076c014807fa4e355"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=ed15ffd02f524b1076c014807fa4e355^sys_idNOT INa61533142f524b1076c014807fa4e318"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</flow>
+        <generation_source/>
+        <name>Service Catalog</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 22:02:55</sys_created_on>
+        <sys_id>a61533142f524b1076c014807fa4e318</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 22:02:55</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/61T32vbMBD+V4KeNvDATtZm8dsYFALdCk3Xl1KMIp0SMVlyJdmtF/q/7y62k7TzxqB70/38vrv7dLdjhq/BsJxd13ZyYdzjZGlZwrSN4C03N20FGBRbpwWgv3tc6hBZfrdjagUPNVgM5R+yhKlbbmrKX3PxY+NdbSXWqMsTCEUQ2k6OGZN3EhSvTXxPucuSb6gDvVdgQESQLFfcBEDP93BqfdUhaLvpHc/Jn/ko5+HvfF5mvIHFfcJKbiWPzrfHJO/KGygrwyMcnM5L8CzP0jRhDRFdtWEpO1TLS8L3tS2IYaHpKE0/DT6lDtisvT16xFYb6cHiXZBCxT12iNR/9yqkCeI8XaRiPl3M59N0NktTdbZWQgkx/5Sl59nZAhuOC2OUWHylktPJ4CmClScL+307Hri8subo2KL8uqlK/hT0T2z+MaU8Bb67LsUOZtFvY1gEsQh7fZp/V14zJt1+kJS0NdbrhWqaMbENqyBd9Ghf/j/B7M0Ep0SwW91VFbVDsbAZnZavDdWENnQH9yCwpIhebzZYiEXO1KX9NqaLnv2JSuuA14KKFEEnHr7Hauser4dzXmi7p9QHjRPcHCweEXldR9rfjnHZcKwgRUePGM97VRQPNVXs/8mAVewnooQgvK7iZxF1A4dP+wt8tA/9CQUAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=ed15ffd02f524b1076c014807fa4e355^sys_idNOT IN6dbc06642fd28b1076c014807fa4e30d,79bc06642fd28b1076c014807fa4e372,79bc06642fd28b1076c014807fa4e374,7dbc06642fd28b1076c014807fa4e375,e9bc06642fd28b1076c014807fa4e30b,f1bc06642fd28b1076c014807fa4e375,fdbc06642fd28b1076c014807fa4e373"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 09:05:19</sys_created_on>
+        <sys_id>6dbc06642fd28b1076c014807fa4e30d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:19</sys_updated_on>
+        <ui_id>015ad7cc-e942-4b3d-b786-caa1b665dab6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/iOBT9KyjPlHXIB4G3qqhSV7szUunMS6kix7kBr0zCxE5nWMR/35vY+RhoGdhlHrqdl0q+vtc593COP/q4tXhsTaxRkAxhPB6SyCbEISTwGAkciJyRP3IoI1bfSukKMDMHluUxjp+pKMrAdjuD/Jkz6N1QRUW2CO1BDl8KkCrkCla7HSbHXK4F3Xw2NRhhSy7iHFJr8vjUt9Y0x+UV5NZkuzd1Kj5BIxCYel8D3AesNutyHGesWEGK4OrgH6ZyamZ6d1OcwaISDulb8E1BGgPiSKiQ0LdWNI2pyvKNNVF5gYEcaPwxFZsmY8lTpftc0W+S/40fdoZlXgLYGDMcNMPQ8KPDyRSJnOHKTBV5Q1eGFEtNSQwJLYS66cZ0wse14lmqSxSNRF2diWKVftCEWM0CnZ+jkAgC1mWfJXLdVjJbZl/va5C3PK0YMS2KjFHRjKhSOY8KVcLZWiCgonhF12ueLsJ1nj3zqhihrAYLgYNBIrKv+E3JF+mAshL3AFmlg1uMT6vwZ5rzsok/cRks3vUtuZE3gkrZtoIchl+KEoluzLQQVixoCso6lvO1usavPIPBvOsb7UfsqLZYKyW9XCt9yUJUeqXyQ43faw9A3LvT8+cp/gRUteIfDKw9lEbv1TCs5r6Xe1XW+6AnjNrt42o3kVbuWicvqD0gb0jtpq03L/cfKR1c3/HwzyhxiD20SQB+ELAxoSzwfc91Wg0hAuyBCtQ3lbh2q/kLbOYnwKilfW1w9O5rHK8CNHKX+MOkiz2pz+qgkfnwTJm/vqvb/nsSesEf9ljWkQOef44jys99Sjnuq3eljvxh5I9JEF/FCYmu3MDxrigDcgW+7YEX+8yznZ/gImIf25nj4AWRJhxE985UTxyaqTNznqlOQHVgqlsD6zW4xlLV8KUTpKrfO0EuZ62AkLfkrfd0ZWJHxQadg+SvrMjTIw4Il1xWynjVCZ2M8xxxAsjaEb9rlPuG2Af/b/zg/PLD/98PrndUap3LeaNqlqUxLxHLjiv0zgzyOt18etxupaKKs4Ef2H4yGjNGaEBs3yU286jjREDcCFzX3u2eDu3zX5Y6z2cnNN+8zQsB8kdkGJe1NzxT1HVaey80k8Zt7qVe62/MbO/lBcOOai0Zt9qKCySIqu5zfTu3NOy5NZlbaZbC3OrPrTIrLMVVhTEDwTUTVWy70+Mip6bc7gzb2phuZJUp2RJiVGYV/S4SVlYw8Uv8Z+wERmr3TQvoTTUlhyTVz6cap2aFH5xxM5NQrfTbA++edd7Fzjr3l/ku8VgKm+cEHmS4913QkU//ALFYx8k7FgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=6dbc06642fd28b1076c014807fa4e30d"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 09:05:19</sys_created_on>
+        <sys_id>79bc06642fd28b1076c014807fa4e372</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:19</sys_updated_on>
+        <ui_id>14347e68-d0cb-4a84-ba53-9d7d7f8bedc1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V32/aMBD+Vyo/hyghQAtvGx1PWyutU1+6znLsC1hz4mA7tAzxv++cOBR1rTakaVKl5c13933+7ocvdzsiBZmRSQrJeJpOeJZm2TBJhhejNJ9keToUGQMYkYhUrASMdCxXQNtDRDZMNd74SIfpKEnGE6pYTmFNE5pr/V1WSwwS0taKbW9D7PuDg6+kEgYqMru7j0jNDJI6MGS2e+b6U4l4OSgM/eI1viLZbesXbR+PsWdXnUMb4fUkEYFHB5UAFFIwZSEiJasEc9psycyZBg0GmLiu1PYQsZKVQ0LiYx+t/IHXXiQ+rgDMjEPnOxxpqFNnLi6ZYzfIzF1jQihfacnBdjURULBGufmxrQu4rp3UVQdp0wxorZqyuupKQg4EfVvQ0lgUAbXP0ysPaRQ3K/3wuVe5kFVbkuBUmjN1ODHnjMwb5/XsCCgokYiWrK6x4bQ2eiNbMGop46XCQ1wo/YCXWrmsYsa98BjLyuIF2i9b8y0z0mfxCWkQvI+I3dq5YtY+5YJFpOvGK+kyCznQrgwewo2s3Tu8YANB7j7qZ19AMn11sNL8aZDacbdHcw/rRtY+ya9NkmRit0unCefjczYQ4yIfjPj5aHDBczaYTItxVnBRZPkw/tCj9vtv4ZlQTBpOIjkGIo8BnJPqdJojHLLUjam1PY0hYFoNayyPA0HzbU9xA2aDM3k2x6YqvaRpHKKodFDGT5BCG6SwjrnGdmDsN04MPrlfVsj/sv+bsp+4oH//jvoFvZCghH3hYfXbGUrstwPaPbRnGzo4z26DM2zp9G9t6XSStN8b2tVdcm9+VR/9lV9Z2vc/ATYcVL2yCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=79bc06642fd28b1076c014807fa4e372"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 09:05:19</sys_created_on>
+        <sys_id>79bc06642fd28b1076c014807fa4e374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:19</sys_updated_on>
+        <ui_id>ebf0e30a-8514-45ef-a052-dd64e0ea54bf</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VVTU8bMRD9K5HPm8ibXULIrYWiHlqQSsWFguW1ZxML7we2F9hG+e8dr50QUVBbqZfszfPl996MZ2/WREmyILMU6NFJOhNZmmVTSqfzPC1mWZFOZcYBcpKQmleAkY4XGthwSMgj1503PrNpmlN6NGOaFwweGGVF09yreslWyrrG9BgslW01769jzscQMPq8CxArpaWBmixubhPScoOXODBksX7l+lvICAY0hn73mN+h4Pr2TduX/dzRRXA0Rno8NCHw7KCWgEBKri0kpOK15AORhTMdGgxweVnrfhexUrXDgsTHPlv1E6+dUx9XAjITEHy7I4t6BXN5xh2/wsrCdSaGilWjBNigiYSSd9qd7ttCwGXrVFOHlIFmzG50V9UXQRKyK7BtD1o6iyCg9Tw98kijvFo1T9+2KM9VPUgSnboRXO9O3Dmjis55PGsCGiosxCretn4yWtM8qiEZsVSTpcbDpNTNE15q1bKecOGBT1BWPjlH+9lgvuZGeRZfsQwmbxJie3uqubUvXFBE9tB5JIFZ5MCCDD5FGNW6D3jBI0S4m2T7FiTQk3cHKy1eBmkYf7v3DuLQ/+gozeR6neZZfgyz+VhSUYxzPs/HBT/KxifyWB6X8wKkSCcGBI7VZnMX6IZc5IbqgLwzUHFzb4P100OnWq/hyD8ekKOrTmCzbdlp3d+hGmVjKpCs6EN8LMlQQQiW35/hIUD+x8Xw5/5tF8O5Ai3tGw3dbgWoUCsHLDT41WaIztF1dMbtkP6v7ZDO6PAd0I4I5A5+Rez9Dd5ZFre/AGWYWpw6BwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=79bc06642fd28b1076c014807fa4e374"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>3a0d9a7b-bb38-41b5-b6cc-b6ae3bb20d25</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 09:05:20</sys_created_on>
+        <sys_id>7dbc06642fd28b1076c014807fa4e375</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:20</sys_updated_on>
+        <ui_id>357de864-37fc-4714-ae7b-810307e3e35c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VVTVPbMBD9KxqdWmqM7UAK6SkDpT1QmGkYLoR6ZHudqCPLRpJDUib/vStZDimFfsxwwReP9kvv7e6zr+8pL+iIDmOIDo7iYT6IB4MkipLD/TgbDrI4KQYMYJ8GVLIKMNKwTEDqDgFdMNFa4zJN4v0oOhimgmUp3KZRyppG1ehPRT3DyILrRrDVlU8Yey85c958zkWhQNLR9U1AG6awvAFFR/ePXP8KFmGAwNBLi/YZ8GbVPGk7284l552jVoXFEwUUlgZkAQikZEJDQCsmC2ZqtaIjo1o0KGDFhRSrTcScS4MFqY1dav4Drz2MbFwJyCyHzrc5pr5Znbk8YYZNsHJuWuVD83nNc9BdTwooWSvM8batC7hoDK9ll+Jo+uxatJU871pCNwX62aCl1QgCGsvTIvc0ysm8vvvaozzl0rXEO0WdM7E5MWMUz1pj8dxTEFBhobTCpeByltrZc5eMWKpwJvAQlqK+w0s1n8mQ5RZ4iG1l4SnaT5z5iiluWXzBMpi8Dqhe6WPBtH7ggk1Mb1uLpGPmOaRdG2xKrnhjxnjBAjzcddCroIDo6NnFirOHRXKLr7cUUEDONWKetlE0wH39DrmB4ttGBUgFOl8SJcPd6P1ukngvqM7xu0pepuh/iuvvPejFdcpBFPqJpvTKggrZGEi7Jj1Sl3eSK+/0CotfSmHxMHLPK9JZR+7Vy2zri/q04HqjBf3LMlvDH+Pp3s5U7uyMc5yAJhbz3tiRIJYEaTXyJmYOpCxSZ6kzK5qQTFwBUrXaEAU4YUkYcXsZElvxwm4fkW2V4YtrUpelBkOyFXkXEy7JR6VqRT7jIgp7xQS61jkwC8aF+1fUbg808XtF2gaBNQqh2pwpDaeUsBK118Oz6bBkqAQYIRpF9LxWBseQk06+fWCIc57NQIV5q3AtTOgC7RwdL7z1g63lmW2qWOPeVEq4I5/s9HHF4ZJX8OYtTk2zBRT9Mj58QOh6vb75CUQw7iYYCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=7dbc06642fd28b1076c014807fa4e375"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 09:05:18</sys_created_on>
+        <sys_id>e9bc06642fd28b1076c014807fa4e30b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:18</sys_updated_on>
+        <ui_id>190cc57a-d5fb-4c74-8cba-69f53fcdf3b2</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91V227bMAz9FUPPRmDn1jZvW7cCA7YVaIa+DIUgyXQjTL5Ul2RZ0H8fZcuJm6xpC6wD1sdQpHkOyXPyfUNkRmaE5wlnI8bFKE3SUZIMT8cpn454OsxGDICRmJSsAMzUcOfAWMiotFBgfMmU8w+bzRz0UgqIzpllqrql6SAkN6n395icSVMrtr4ONRgRC6kyDSWZfb+JSc00trGgyWyz9/RcnIpxUJg6d7yQFoFGVy2KIxzsum7jOWA/ASH0OXzqqhevdObRJTGBnxbKDBBWzpSBmBSszJit9JrMrHYY0MCyy1KttxkLWdqWdsF+GvkLm46Gca/vjBhBEV4HbPtCw+QaNAF99KlNyj/gwOfYUlint2OtcBWmHV0GOXPKnvdjbcJlbWVVtiWWcdVVV8oV5dd2WmT7gd7anEFIUPsBeEqBXz5fVKvttC5k2cwqPKpKMNVLBabF4kKC8ostXcExNybMWi25sx7nhoCCAhvQgtW1LG9praulbD6KGIvBrcIfg1xVKwRj5G05YMITGuAe2OAC4x+a8DXT0rP7gp9pulS4FZrpqq4Dab8wch8Tszbnihmz444roHfOI28nETjTdmy+RGhZ23fYeAmB3n3c6Yofu9c83d0krhL3a4GKoJ49eeX5lE34RAzzCSQ8TU6mIknHp8lJzsYwyrJDcYU7ifCKo493TtZ+ki9X3NMMOsV9CxQ6A2ju00SoiqhbQDQHa54m/XI9pq+mR0vxJh4ANBQ/TJeBEjUtpT9J9elBvAnt+l7/SrnSoD8WFd5Mw5n2d9WIGAWJRHArHuIuuMB+VLvSygJoIyoqS1rVZilh9XoGcHJcPic7LXQX1t2V6Yl/POXZGZ+Mh/nZH8Q/mcz8WSIZP0FawiqeThJI87NHCkAcFHA2xQ5Z8kgBPyjAqxKTUfpIhzTbLzj0p7dB6mVu+oxz6Ny0847r3j0cOZVgmUY5s+BO/AC7Z5pz/xK9756Cbw6P+2aIPMc402GSJA+98xFX/F9t76HBoRHl+N+Fs9vtAW8CmkmSpgSbvpYNPsvO8OhKoRxmFjgKqbHLFqr/+9mm+dH0QICmK9122qbUGmv00v/dKRC2Idn5beW0CH6M0X2N/D1TvfkNVKl8m68MAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=e9bc06642fd28b1076c014807fa4e30b"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 09:05:19</sys_created_on>
+        <sys_id>f1bc06642fd28b1076c014807fa4e375</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:19</sys_updated_on>
+        <ui_id>63eaf33c-f729-48f3-b80c-21c184575d97</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VVW0/bMBT+K8jPSeQ0aXp5QyCeGEhj4oUNy7FPWmvOBccBuqr/fcexWyoG2ibtYeTtXP1955a7LVGSLEmRAp0u0kJkaZZNKJ3M87QssjKdyIwD5CQiDa8BPS0vNbBRiMgj14NTPrNJmlM6LZjmJYMHRhnvOtOinel2hZ5S9Z3mm9sQcBqsJ5ejVayVlgYasrz7FpGOG0xvwZDl9pXpT8EiDNDo+sWhfQe83XRv6i6PY0+uvKE10uGhEYFnC40EBFJx3UNEat5IbluzIUtrBlQY4PK60ZuDx1o1FhMS5/vcqx/47Jw6vwqQmQBvO4gsFMurq3Nu+Q1mFnYwwVWsWyWg9zWRUPFB27NjnXe47qxqGx8y0gzRrR7q5sqXhBwS7HuDmqFHENA5ng55oFHdrNunz3uUF6oZSxKMuhVcHyRurVHlYB2eLQENNSZiNQ6FalbM9V6NwYilTlYahaTS7RM+2qtVk3DhgCdYVp5coP58VN9yoxyLT5gGg3cR6Tf9meZ9/8IFi8geBofEMwscmC+DCxFGdfYUH3iEAHcX7bdAAl28O1hp+TJI4+D3RxtQtu13pPZ1oDST222aZ/kMinksqSjjnM/zuOTTLF7ImZxV8xKkSBMDAsdqt7uXIFSPhH203xyQ94cVwjrAIfOCCjGd8VhOK8wsZnk8FyWPi0U1zSohq6ycJAHNGLjb/bp+/znavzwHv+/a/hxcKNCyf6ON+1sANZbJAvNtfXUPgvHkNhjDTUj/1U1ICzp+H+gyeHIf/jAc/QPeORHffgLm3ae4KgcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=f1bc06642fd28b1076c014807fa4e375"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 09:05:19</sys_created_on>
+        <sys_id>fdbc06642fd28b1076c014807fa4e373</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:19</sys_updated_on>
+        <ui_id>55e19531-a1bf-4fb3-89be-f953f7509a1e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K5Wf28pp2tL2baJUmsRAgokXhqIb26GWHCf4o9BV/e+7SZwSFcZA4gWtD5V8v3zOyT3J7Y5IThZkLDiN5tGUxVEcjygdzcZROo3TaMRjECIifaIhF1hpBCsMx/MGlK8Cu100p4xNTmDAJ1k6GLOT8WDGUhhM59kkzhjP4nQ0PHvwssyFdvs9NnNpSwXbmzADI2wtFTdCk8XtXZ+UYPA6JwxZ7I5S78WrIBUKS69awMcE3LaszrxgvsKVyDZ4HjqXIdP7vsQMNlVwIton4skJzQUCyUBZ0Sc5aA6uMFuycMZjwAjgl1ptDxVrqV1DNIcnK3/jzWNa1WUCmbEgwuGYBIGacLYEB9c4mTlvDnoVkgnbaMJFBl65026sKbgsnSx00+IgVW13oXyuLxpFyGFA53l4iyBEWfGskDe0sut18XjVglxJXUsSKKqCgTqcwDkjU+8qODsilKg1zqEspb5PSlNsZN2MUPLhvcLDMFPFI95p5b0eAqtwD1FVGK4wvqzDN2BkReIHjsHmfZ/YrT1VYO0zFdQwefAVkoZYoJDUKtQSJPUmVM3MyNJ9w6s2IgDf94Mj0slbG8bmzwvVmfnsiqdkFI0pnUwT3MNEPCQU/4IDXu7/WSf1MSO8A2ZrhJ/1438ddvDCi9h5t7d30SSCEyaf5oTZV3JCoPHlrfAvA9DRm6/YzibVO287y28dOG9/eUpj7jVsQKqwe0d7//fCj7ngHVhbF6ykUNy+Ar61gMgRoRNJQ+bIBiHZuwnJw0fh07wQTWn9+0KO+G++DXd/AIWau0EvCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=fdbc06642fd28b1076c014807fa4e373"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=ed15ffd02f524b1076c014807fa4e355"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=ed15ffd02f524b1076c014807fa4e355^sys_idNOT IN1abc06642fd28b1076c014807fa4e379,82bc06642fd28b1076c014807fa4e377"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">6f2cc2242fd28b1076c014807fa4e383</block>
+        <comment/>
+        <connected_to>8a6f1f14-c55a-438b-bcae-87292d7919d0</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 09:05:21</sys_created_on>
+        <sys_id>1abc06642fd28b1076c014807fa4e379</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:35</sys_updated_on>
+        <ui_id>3a0d9a7b-bb38-41b5-b6cc-b6ae3bb20d25</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">262cc2242fd28b1076c014807fa4e33d</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Lab Equipment Booking Flow">ed15ffd02f524b1076c014807fa4e355</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 09:05:20</sys_created_on>
+        <sys_id>82bc06642fd28b1076c014807fa4e377</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 09:05:34</sys_updated_on>
+        <ui_id>8a6f1f14-c55a-438b-bcae-87292d7919d0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V0U7bMBT9FeTntHKSJm15QyAkJDakFfGyoejGdloL185iB+iq/vvuTdIWbUwMjce9VPW59r3nnN6jbplrQ90Gf+vOvNdLy06/3kdMW8Lw+5ZVxj1du6UWV9YHsEItNv5KslNWzgVM42SWVPhRxnyaCx5PZnxawUSls4pFzMJa4U3hrNRBO1t0QMQewbRUOF8p8XByVteNQ+hkESC0HutS+9rA5u6Na2KljWzUwLmGBrsH1bDT7S8lTXwrDlU8F7FIkzxNOE9mk7jM0zJOZAoKUmxooFSGBu4Jn1x3yJ+VhE1NuA+NtsvhfD10WexB10hiFfOIqeegrFTIpwLjVcTWYCUE12wOSKNA3lhzBFbaBmzH6PKz1z9wYJJldLFSKFGovng4FoN9PVxdQACk0orQNsNVsXJaKN+bI1UFrQnnL7H+wk1NUvsnAUqzf+1Mu7afe0fYocH+10Kk9UhC1aSUqA86qsXKPX3Zs7zUtnNlKBonwBxOENC7sg3EZ8uUUWtsVKyhrtHRgvZAd4+Ry3q8NHgY057iUNrhMQgiPkZjYXyJ+EUH30GjScUnbIOPe5oleC2Kbt+xHdqk2C5ifuPPDXh/FInuFt9bothLHsQVvT/0RDS6Dmc4+VENOnbRx8bnRXK2Wx5nIKdCjNR8kowmZSpH5XSWjwQArnWeSSjzMQyZKXB2ULvdt5bzVPYoLuFvSfuotu9L5hyyKot59noyJ/lryXzdnvfEMXkjjrQLf5lGzvn/OP5zHLUv+hAN2rrhH5jGe4pPP/PgtdAeqd0SdrX/z6PCBpeLMnuEnlzzQKKO2O4newnV2z0HAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=ed15ffd02f524b1076c014807fa4e355"/>
+    <sys_hub_flow_variable action="DELETE" query="model=ed15ffd02f524b1076c014807fa4e355"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ed15ffd02f524b1076c014807fa4e355</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 22:02:52</sys_created_on>
+        <sys_id>0215ffd02f524b1076c014807fa4e394</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 22:02:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ed15ffd02f524b1076c014807fa4e355</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 22:02:53</sys_created_on>
+        <sys_id>8615ffd02f524b1076c014807fa4e39f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 22:02:53</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_ed15ffd02f524b1076c014807fa4e355"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_ed15ffd02f524b1076c014807fa4e355"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>c9dfdb982f9e0b1076c014807fa4e3a9</sys_id>
+        <latest_snapshot>ed15ffd02f524b1076c014807fa4e355</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT INdd2533142f524b1076c014807fa4e36f"/>
+    <sys_flow_trigger_plan action="DELETE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan/>
+        <plan_id>c9dfdb982f9e0b1076c014807fa4e3a9</plan_id>
+        <snapshot>ed15ffd02f524b1076c014807fa4e355</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-21 22:03:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dd2533142f524b1076c014807fa4e36f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-21 22:03:06</sys_updated_on>
+        <trigger display_value="">5d2533142f524b1076c014807fa4e36e</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=c9dfdb982f9e0b1076c014807fa4e3a9"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</application>
+        <file_path/>
+        <instance_id>12b321ccff0a43d0c80bf8e4fc4fd9f7</instance_id>
+        <instance_name>dev427596</instance_name>
+        <name>sys_hub_flow_c9dfdb982f9e0b1076c014807fa4e3a9</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=45275000,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;29000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;lab_equipment_booking_flow&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.requested_by","label":"2 - Create Record➛Booking Record➛Requested By","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"requested_by","choices":null,"usedInstances":{"ee37fc0f-45df-47e5-a04a-e343a70a9a75":["record"],"681ccacb-6e1f-46ed-bf4e-6f5015ed442d":["record"],"66c6c099-fb4b-4433-9450-41112140489c":["recipients"]},"attributes":null},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.Equipment","label":"1 - Get Catalog Variables➛Equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"Equipment","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"015ad7cc-e942-4b3d-b786-caa1b665dab6":["record"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["equipment"],"55e19531-a1bf-4fb3-89be-f953f7509a1e":["record"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1.record","label":"4➛Booking Record","reference":"x_2140056_lab_eq_0_booking","reference_display":"Booking Record","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record","label":"2 - Create Record➛Booking Record","reference":"x_2140056_lab_eq_0_booking","reference_display":"Booking","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"],"06b2f648-b7b6-41bc-81f7-f1d11b6dc46c":["booking"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"015ad7cc-e942-4b3d-b786-caa1b665dab6.approval_state","label":"2➛Approval State","reference":null,"reference_display":null,"type":"choice","base_type":"choice","parent_table_name":null,"column_name":null,"choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"System Administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"d9733aab-9037-4459-a256-27dfd4e193bd":["approval_conditions"],"015ad7cc-e942-4b3d-b786-caa1b665dab6":["approval_conditions"]},"attributes":null},{"name":"Service Catalog_1.request_item.request","label":"Trigger - Service Catalog➛Requested Item Record➛Request","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"request","choices":null,"usedInstances":{"06b2f648-b7b6-41bc-81f7-f1d11b6dc46c":["approver"]},"attributes":null},{"name":"cb67e54c-61d8-411a-8402-3282d7aebc2f.equipment.sys_id","label":"1➛equipment➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_2140056_lab_eq_0_equipment","column_name":"sys_id","choices":[{"label":null,"value":null,"order":0}],"usedInstances":{"e47e5718-8a04-4473-b266-e3e528b40737":[null]},"attributes":null},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.equipment","label":"2 - Create Record➛Booking Record➛Equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"Equipment","type":"reference","base_type":"reference","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"equipment","choices":null,"usedInstances":{"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"]},"attributes":null},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.equipment.equipment_id","label":"1➛equipment➛Equipment ID","reference":"","reference_display":"Equipment ID","type":"string","base_type":"string","parent_table_name":"x_2140056_lab_eq_0_equipment","column_name":"equipment_id","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{},"attributes":null},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.equipment","label":"1➛equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"equipment","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.return_date","label":"1 - Get Catalog Variables➛return_date","reference":"","reference_display":"return_date","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["return_date"]},"attributes":{"catalogType":"10","catalogTypeLabel":"Date/Time"}},{"name":"cb67e54c-61d8-411a-8402-3282d7aebc2f.equipment","label":"1➛equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"equipment","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"],"d9733aab-9037-4459-a256-27dfd4e193bd":["record"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["requested_by"],"015ad7cc-e942-4b3d-b786-caa1b665dab6":["record"],"cb67e54c-61d8-411a-8402-3282d7aebc2f":["requested_item"],"7b8abc04-2b12-4d24-a548-b5bc68200672":["requested_by","equipment"],"5c84939c-1911-4167-8d40-1a5e84651f9d":["requested_item"],"7bc4c5a3-575c-417d-9d9f-1a08a5a77b33":["condition"],"55e19531-a1bf-4fb3-89be-f953f7509a1e":["record"],"681ccacb-6e1f-46ed-bf4e-6f5015ed442d":["record"],"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2":["requested_item"]},"attributes":{"default_search_field":"number"}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.number","label":"2 - Create Record➛Booking Record➛Booking Number","reference":"","reference_display":"Booking Number","type":"string","base_type":"string","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"number","choices":null,"usedInstances":{"8e28068e-e970-4c25-bf0a-05420ff16f49":["booking"]},"attributes":null},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for","choices":null,"usedInstances":{"7b8abc04-2b12-4d24-a548-b5bc68200672":["requested_by"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["requested_by"]},"attributes":null},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.booking_date","label":"1 - Get Catalog Variables➛booking_date","reference":"","reference_display":"booking_date","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["booking_date"],"63eaf33c-f729-48f3-b80c-21c184575d97":["approval_date"]},"attributes":{"catalogType":"10","catalogTypeLabel":"Date/Time"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.equipment.sys_id","label":"1➛equipment➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_2140056_lab_eq_0_equipment","column_name":"sys_id","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{},"attributes":null},{"name":"Service Catalog_1.table_name","label":"Trigger - Service Catalog➛Table Name","reference":null,"reference_display":null,"type":"table_name","base_type":"table_name","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"e47e5718-8a04-4473-b266-e3e528b40737.Record","label":"5➛Equipment Record","reference":"x_2140056_lab_eq_0_equipment","reference_display":"Equipment Record","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5c84939c-1911-4167-8d40-1a5e84651f9d.equipment","label":"1➛equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"equipment","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"5c84939c-1911-4167-8d40-1a5e84651f9d.equipment.sys_id","label":"1➛equipment➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_2140056_lab_eq_0_equipment","column_name":"sys_id","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{},"attributes":null},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.purpose","label":"1 - Get Catalog Variables➛purpose","reference":"","reference_display":"purpose","type":"multi_small","base_type":"multi_small","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["purpose"]},"attributes":{"catalogType":"2","catalogTypeLabel":"Multi Line Text"}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;ed15ffd02f524b1076c014807fa4e355&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Lab Equipment Booking Flow&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id&gt;5d2533142f524b1076c014807fa4e36e&lt;/remote_trigger_id&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 20:29:58&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/sys_id&gt;&lt;sys_mod_count&gt;118&lt;/sys_mod_count&gt;&lt;sys_name&gt;Lab Equipment Booking Flow&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_c9dfdb982f9e0b1076c014807fa4e3a9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:50:22&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record&gt;f169ebe82f9e8b1076c014807fa4e3f7&lt;/version_record&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_flow_catalog_trigger action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;catalog_item/&gt;&lt;name/&gt;&lt;published_version/&gt;&lt;run_flow_in/&gt;&lt;sys_class_name&gt;sys_flow_catalog_trigger&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 22:03:06&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;5d2533142f524b1076c014807fa4e36e&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:06:05&lt;/sys_updated_on&gt;&lt;trigger_definition/&gt;&lt;/sys_flow_catalog_trigger&gt;&lt;sys_trigger_runner_mapping action="delete_multiple" query="identifier=c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT IN89dfdb982f9e0b1076c014807fa4e3ac"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/id&gt;&lt;name&gt;Lab Equipment Booking Flow&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 20:29:58&lt;/sys_created_on&gt;&lt;sys_id&gt;89dfdb982f9e0b1076c014807fa4e3ac&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-21 20:29:58&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=89dfdb982f9e0b1076c014807fa4e3ac"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT IN6150a31c2f9e0b1076c014807fa4e323,e850631c2f9e0b1076c014807fa4e368"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value&gt;sc_req_item&lt;/default_value&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/model&gt;&lt;model_id&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_c9dfdb982f9e0b1076c014807fa4e3a9&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 20:32:11&lt;/sys_created_on&gt;&lt;sys_id&gt;6150a31c2f9e0b1076c014807fa4e323&lt;/sys_id&gt;&lt;sys_mod_count&gt;29&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:50:19&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6150a31c2f9e0b1076c014807fa4e323"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/model&gt;&lt;model_id&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_c9dfdb982f9e0b1076c014807fa4e3a9&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 20:32:07&lt;/sys_created_on&gt;&lt;sys_id&gt;e850631c2f9e0b1076c014807fa4e368&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-21 21:29:57&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e850631c2f9e0b1076c014807fa4e368"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT INeb87b3582f524b1076c014807fa4e3c3"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Service Catalog&lt;/name&gt;&lt;published_version/&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 22:13:37&lt;/sys_created_on&gt;&lt;sys_id&gt;eb87b3582f524b1076c014807fa4e3c3&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-21 22:21:42&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Service Catalog"&gt;c43a1011c36813002841b63b12d3ae15&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/61T32vbMBD+V4KeNvDATtZm8dsYFALdCk3Xl1KMIp0SMVlyJdmtF/q/7y62k7TzxqB70/38vrv7dLdjhq/BsJxd13ZyYdzjZGlZwrSN4C03N20FGBRbpwWgv3tc6hBZfrdjagUPNVgM5R+yhKlbbmrKX3PxY+NdbSXWqMsTCEUQ2k6OGZN3EhSvTXxPucuSb6gDvVdgQESQLFfcBEDP93BqfdUhaLvpHc/Jn/ko5+HvfF5mvIHFfcJKbiWPzrfHJO/KGygrwyMcnM5L8CzP0jRhDRFdtWEpO1TLS8L3tS2IYaHpKE0/DT6lDtisvT16xFYb6cHiXZBCxT12iNR/9yqkCeI8XaRiPl3M59N0NktTdbZWQgkx/5Sl59nZAhuOC2OUWHylktPJ4CmClScL+307Hri8subo2KL8uqlK/hT0T2z+MaU8Bb67LsUOZtFvY1gEsQh7fZp/V14zJt1+kJS0NdbrhWqaMbENqyBd9Ghf/j/B7M0Ep0SwW91VFbVDsbAZnZavDdWENnQH9yCwpIhebzZYiEXO1KX9NqaLnv2JSuuA14KKFEEnHr7Hauser4dzXmi7p9QHjRPcHCweEXldR9rfjnHZcKwgRUePGM97VRQPNVXs/8mAVewnooQgvK7iZxF1A4dP+wt8tA/9CQUAAA==&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;service_catalog&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT IN1bdbbde02f528b1076c014807fa4e302,229df9242f528b1076c014807fa4e32f,24b262ec2f568b1076c014807fa4e37c,560523a02f9e8b1076c014807fa4e38e,6efa39e02f528b1076c014807fa4e31c,a2ab7d242f528b1076c014807fa4e3b8,ec89f9202f528b1076c014807fa4e304,eddcb1e42f528b1076c014807fa4e3dc"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;7&lt;/order&gt;&lt;parent_ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 07:51:42&lt;/sys_created_on&gt;&lt;sys_id&gt;1bdbbde02f528b1076c014807fa4e302&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:31:11&lt;/sys_updated_on&gt;&lt;ui_id&gt;ebf0e30a-8514-45ef-a052-dd64e0ea54bf&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/9VUW2/aMBT+KyjPIXJICJS3TRvay1ppnfrSFcuxT8Cqc8F2KBniv+84DqzrhlRNk6bmzd+5fd+55P4QSBEsgiwGMr2KM57ESTIhZDJP4zxL8ngiEgaQBmFQsRLQ07JcAe0fYbBjqnXgnk7ilJBpRhXLKWwpoXldP8pqTTfS2Fp36CykaRTr7oaY995h9OnswDdSCQ1VsLh/CIOGaSxiQQeLwwuT7RpwlUBhnq+O0OjaE3qtmF+CL4hzVV5itRaOEAkD2FuoBGC9gikDYVCySrBeycLqFgENTNxUqjt7bGRlMWHgfPdGfsfsc+L8CkBpHLzt/KRDwzzMN7XkcNNYWVce6YkNxlq1ZXXtRbhWQ8FaZU+tRqQ1mA8aR9mRGBgVt5v66cup4FJWvbrBqGrO1PnFrNUyby0YNw9QUGIiWrKmcVNudL2TfTByKaO1wkdUqPoJixq5riLGHfEIO8SiJeIfeviOaelUfMY0GHzs1dNt6+p6HQNj6kWjg+FaNvYdptvBQO4YnrZYALm6OPg4/znofnHNsw0e1vVbS0giDoc4TdIZZPOxIDwfp2yejnM2TcZXYiZmxTwHweNIA8d9OB5XXpyPRSXYCxArDSXTj8ajH7etbFzHRm7tQYxuW87BmKJVqluh9qLWJQiad95/SEmxX+CR3w/oLVD+y5OGEoVaGHmp4aune0qwlKCE+cO4Tzc9FKC7ocBw1/G/uus4I/33f67b83xjx/3sP3vhzB9+AEZZHb+uBgAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=1bdbbde02f528b1076c014807fa4e302"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;10&lt;/order&gt;&lt;parent_ui_id&gt;3a0d9a7b-bb38-41b5-b6cc-b6ae3bb20d25&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 07:59:17&lt;/sys_created_on&gt;&lt;sys_id&gt;229df9242f528b1076c014807fa4e32f&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:31:12&lt;/sys_updated_on&gt;&lt;ui_id&gt;357de864-37fc-4714-ae7b-810307e3e35c&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/9VU30/bMBD+Vyw/bayEJIUOuqdKjO1ho9JAvFAWOc6l9eTYwXZKO9T/fWcnKT8GE5qQpvWl8v347ru773J5S0VBx3SUQHxwlIz4MBkO0zhOD/eTfDTMk7QYMoB9OqCKVYCRjuUSsvAY0CWTjTeusjTZj+ODUSZZnsF1Fmesro1Gfyb1HCMLYWvJ1hddwqTzki/ByxdCFgYUHV9eDWjNDMI7MHR8+8jl1jX4GiAR5NxTIactlZe28SD5mbZ8lcc2bQpPKB5QWDlQBWC9kkkLA1oxVTCnzZqOnWnQYIAVUyXX24iFUA4BqY9dWfET0Q9jH1cCtsah9W2fWTet1swXWnCY1k5o1VoCsc6pZVOp07YJP2coWSNdP2e0NBbxoPaUPYmOUXm20Dff+oInQoXuOqfUnMntizlnRN44sH4fIKFCoKzCBQs1z/weRUhGLlU0l/iISqlvsKgVcxUx7olHOCEWnaD9OJgvmBG+i68Ig8mb0H123fi6bR8d46xtGgMsN6J2E4RbQkduM+j1W0B89Ozik/xu0UGy9p52C+DCIsNZE8dDVNoP4A6K71v9InFofWmcjnbj97tp2nnBtI7f9f06oH95FlAhFQekJTN48YR6gBMBsrBPjKy/i65AtuwKdLeRvNZtJKM4/P7NhbQ8/7MDufetevpUeqOn+ECG3vDHeLq3M1M7OxPOwVriGe5NAmXiKZPGYpfELYCURRYsOvdyj8hZACBVYx0x4BqjCCNBMxHxiFMvG6KaKsc/YYkuSwuO5GvyLiFCkY/GaEM+o4KkL3EG7aACmSUTMnz+ddi6JZ0gSFMjsdogVZ8zo9GMElbi1fT0fDqsGEoYxsjGELvQxuHQOWkPrw+McKvzOZiINwZF4KIQ6LcW+sKqHzxW19kWxRv3ZkrBDfnkd32MMz4XFbx5i1uzbAlFL72706ebzebqF+6DyfiMBwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=229df9242f528b1076c014807fa4e32f"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Look Up Record"&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/action_type&gt;&lt;action_type_parent display_value="Look Up Record"&gt;b93f42810b30030085c083eb37673a63&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;5&lt;/order&gt;&lt;parent_ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 10:41:21&lt;/sys_created_on&gt;&lt;sys_id&gt;24b262ec2f568b1076c014807fa4e37c&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:44:33&lt;/sys_updated_on&gt;&lt;ui_id&gt;e47e5718-8a04-4473-b266-e3e528b40737&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1X227jNhD9FUHPtktdLNl5KzZrYIG2AXbTvGwXBEVSMVGaVCgqiWPk30vqZsdWbPkSdAv0yTA51zNnZqjvK5cR98odEzBNp9PxJAYgCACIogAjL0mCCCcgSTx34Aq0oEYyl0pDvcyoOXpEvGjPUI7NEWF5xtHyrr5BjpbOiznHc8aJosK9+v5j4GZIGWuaKvdqtXVlTUOOEsqN+qe5ZNh66htko/jNROTcVlF2BF7+XBnPtXmpiI0lGLj0WVNBqHGXIp7TgbtAgiAt1bI9URSRG8HXB3MmtLHmWuHnnL0Y04Fv5VJq0sK0umv/whqj6riKITfJr9roW9Q6AK5DBa+DtfyLlUfb8oRuKnivBlxCU1Rw/ek0n96xPn3rs0rwJtNMmhK7gYUfJbxGBUteLMQfVYncNsK7DmZVN9fvEKzIDbA0s8Wz1ahLk36by6evDfIzJsq46ksuMeLtP6S1YkmhLS4rNyUwZZQTyARnwnrSqrBUoZwujAe4QFnGxD3MlHxkpVWTy2J0z82fUcrlk8WC3YsRwjbzkSERGs3M+XV5fIcUsyj8bswY5YF1ODeqtT+YY8UyDZ8Yuad67b2RIlI/If53133NrraHyvTc15KA8KGwGVdA11jBsixWoPL5q4n3kdaw2IqXveft7T1EtvqsKusmO6jJl0NRLJIy3a05sX192riY2Yo5JZkGvcNulG8sZ51k+V4m9cyoWCEqHw3PLzY3JuC4udG21VFdtdsulj5ndMsHNkVXFx4ic4XEIUZP926T6ZoHLIULgx7LOIWKYlP0HCJFYSoLQWCVygbVLbQpU7muhXfZ/pXqQglHGjI4ek6dUtpppS+xK3tk1yh+SZ0mvTqG3DHpOWV6TpvecWC8s2HDi3VKeGSnvN12M8R4CX2uabZRO6qUVO9s2QNV21P+niu4Z1DeRYM6f0d38b1zVx+I9cIb/GNm0rl7FFOUhD6K4sDzAPAAicEkjr1JlKQRisN03WgQ5gKbRW8sp4YYxjxsiNBUFeyOlmrbnzpDbs10/WVWm+gbb6N8LcVfBQB+rB0bsKmz0wR8OKV6XiRScorEmp7jf21gXGq1nsvjgt1uY1Md/dZVtI/axAX7U7CHgn6xpJhQ4E88goeT2IuHYUqi4ZSg8RBNk3EcEIrD9PwXJxnvfbpt7GcsBWE2i3zzwbnMISOWkAFZrXASxXQc4mHkkckw9Dw0nITAHwb+xCcxogn20xF9KFhm0RtVyq+vHQ/VC5k9ccdvZtoXpU7lLuianb151uycC7Yh+P+N23+f9HrKkr2PPRSu612ZW3fJM/Q9U5FxZCkG6QMEsKXrLvk/b1yduGCs/zdfaD1if6O8m0tN2/Lv1ocZ+M9/mP2cryATEOOm2rACPZeFKlF5hJgXeXmhkMjrr4FTN8GPfwCvUNWZnhQAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=24b262ec2f568b1076c014807fa4e37c"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Get Catalog Variables"&gt;330ba3abc31013002841b63b12d3aee8&lt;/action_type&gt;&lt;action_type_parent display_value="Get Catalog Variables"&gt;22f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id&gt;d99b275d-5215-47f0-93e1-bbf043777cba&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 15:31:11&lt;/sys_created_on&gt;&lt;sys_id&gt;560523a02f9e8b1076c014807fa4e38e&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:50:11&lt;/sys_updated_on&gt;&lt;ui_id&gt;cb67e54c-61d8-411a-8402-3282d7aebc2f&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+VV227aQBD9FcvPCNmAIeGtt0iV2kYKVV6iaLWXMay6vmR3DaGIf++svQYCgaAokar20bNzO2dmju9WoRThOGRpxGifMt6Po7gfRb2LQcyGfRb3RJ8C0LAT5jQD9NTwUIGxIIi0kKF9TlXlHlarCei55BB8opaqYkrirneuXddrdBbSlIoub30MWvhMKqEhD8d3952wpBrLWNDheLX3ZJclEEUZKAy8gRTwhQNmOBdAGzupWCYtIghumvZOgHNFa/u2XKGFay/qhPBoIReA5VOqDHTCjOaC2kIvw7HVFRo0UHGdq+XGYyZz2+DO6KORvzF5v9fZyT8ODSfYRtvA5oV46mrwvsvga+PEZwXyfl1aWeRNdkuZagkuVJXlPxqAbgSQ0krZnRFUBrND6bC47nyr6WRWLDY8X8m8hu0fVcGp2nxRa7VklQXjxgYKMkxEMlqWMp+SUhdzWQdjL1l3qvCjm6pigUWNnOZdyl3jXaSOdq/Q/rk231ItHYrvmAaDkXgkkghdlKUH5zgO1zVH5KFy/TT4PBLSkIEOhmtZ2g9YZg6+6XWn3Xx2anHSeLscyDUOwALhfr/3DiBNhzRhCe+lCUQsjkZDHsWDi2iU0gH0hThcfz/I4BtlwZeHSpaOtze8iZehtbE/Pbb2duvNMgHuc9DOIZiANS+zcfxi4ne7GEvM0jxpxBBMTOa+dWKa1p87ppcB/x/XJQ3KTlbgQGt0ZJfg+tDcKATaq9zKDEi99UTmpCjNXMJi62YQGTJONZ+91ZGOTm/yaLuW7RK0ozc7BzoYMnHJkkEvvXzmQJNk7DYH8Ti+SA6LzjCJIE4vjwQAPwhgdIgVRHQkgB0E4LbwpB8fqRCL/YBDDfk3QL1O8SaqMrPgY8V/gW1F74xVacPb07/d2ZUTa+SVzbiirK3pta13Wtu85Rxxi3tRFD3VtyPK9ddJE0pIir8EpGHLG84XalLCOgSLvpeAnalOMueqQs8MqZAaq2xadWq/cXPU7DQBmix0U2njUmqM0XP3d1HAbQ2ylcCi0twrKVr39/21cnj/BwEfWxGvCwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=560523a02f9e8b1076c014807fa4e38e"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;4&lt;/order&gt;&lt;parent_ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 07:47:49&lt;/sys_created_on&gt;&lt;sys_id&gt;6efa39e02f528b1076c014807fa4e31c&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:31:11&lt;/sys_updated_on&gt;&lt;ui_id&gt;14347e68-d0cb-4a84-ba53-9d7d7f8bedc1&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/91UTY/aMBD9K8jnEDkE2IVbv7h1V+pWe9nuWo49AatOHByHhSL+e8eJA3RbpFVVqWpz83y8eW9mMg97oiSZk2kCdDJLpiJN0nRE6eh6nGTTNEtGMuUAYxKRkheAkY5nGlj7iMiG68Ybt2yUjCmdTJnmGYM1oywz5qsqlxgkVV1pvrsPsW+PDrFSWlooyfzhMSIVtwjqwJL5/oXL7SrwyKAx/7MnMLjpCLyW/A/JF8T4Ki9txkpPiEYEtg5KCVgv57qGiBS8lNwZuyNzZxs0WODyttS7Y8RKlQ4BiY/d1uobol9TH5cDShPQ+Y5PFhrVmcXKKAG3lVOm7CwtseA0uinKm06EbzHkvNGubzFamhrxoPKUPYnAKL9bmedPfcGFKlt1wamN4Pr44s5ZlTUOaj8P0FAgECt4VeHwWGXNRrXJyKWIlxofca7NMxat1bKMufDEY+wQjxdof9+a77lVXsVHhMHkQ6uerRtft9MRGLNONAbUwqrKvUG4DQRyh6jfWgl0dnHwSXYadLuo9dnGwrpRlZf0paE0lft9MqNCTK74UE7ybDgWV+Phtcj4cDrLJ2kuZJ5mo/hDn3U4PIUFZygROpAnC66x5bmlamxl6pN/jSwcSJbt+rp3YDc46ME77JQ2S5bEIYopB0V8SsmNxaq1466pu2RsIo4BV/Knf+w/U/ebhwIK7ImDQdeV6NU70wMsFGhZ/2KJ+ksRCrBNKBCuRfKnrkUype33d25Gx/MfOxln1/vC8Xj8Dk/cROn0BgAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=6efa39e02f528b1076c014807fa4e31c"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;6&lt;/order&gt;&lt;parent_ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 07:50:49&lt;/sys_created_on&gt;&lt;sys_id&gt;a2ab7d242f528b1076c014807fa4e3b8&lt;/sys_id&gt;&lt;sys_mod_count&gt;13&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:32:27&lt;/sys_updated_on&gt;&lt;ui_id&gt;55e19531-a1bf-4fb3-89be-f953f7509a1e&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1UTW/bMAz9K4XPjiF/xE1zG5AF2GEt0A29dIUgS3QiQJYdW0qTBfnvo/yRZO3aBUWHYcByCiny8T3ywfc7Twpv6pFIkPAqTHkcxnFESDRJwiyNszASMQMAz/c0KwAr10xZaDBu/2CiMczY5pslJBZWszWTimXKdQjZVIpt735byJdSiRq0N71/8L2K1TjKQO1Nd0+ezLYCil2gEO8rFAhv4KIb4J+tZACYS1Ci+YU0NwZj0w+g635AWQvHKiTE92BjQAvAkTlTDfhewbRgpqy33tTUFhM1MHGj1fZQsZTaIKznajeN/I4zwpS0P1edA+rk0FUcQtpvsUvzZSk53FRGlrrLmHaH3WOpbKGvOzFu/5Azq8ywf8zYBvGgcsQdlY5n/mVZPt4O8+ZStyJ7zqrkTB0iZkwtM2twS3gbUFAgDi1YVUm9oFVdrmXbjFSKYKEwCHJVPuLMRi50wLjjHeCaWDDH/KxN37FaOhGfEQab9614urJubiejJ0xbza1g2p4MSxtey8p8QOA19DT3fm/qBF61Qni8fA0cb3ti6t2OZ+kljBM+SkMxGSVhyEaThESjOJpE4pJBxqM8gJWVldvBfv/c72829qzk1oFefJoNrj5DytB9O2h5qq13tejRqRSnln4vRyf/vfwnvJyNXzMAvzre+wTz6OcNjcKEkHHqTEZhRQk9ePe5cz+ePL3x2+xIXFx3JM4V8FPzC4KGT/Nprvfw+N08PPlLHu4Z/WMmfsm6Dz8Aydd0LF0IAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=a2ab7d242f528b1076c014807fa4e3b8"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Ask For Approval"&gt;f8f2e9920b10030085c083eb37673abd&lt;/action_type&gt;&lt;action_type_parent display_value="Ask For Approval"&gt;bae0a1120b10030085c083eb37673a92&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id&gt;d99b275d-5215-47f0-93e1-bbf043777cba&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 07:41:24&lt;/sys_created_on&gt;&lt;sys_id&gt;ec89f9202f528b1076c014807fa4e304&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:50:11&lt;/sys_updated_on&gt;&lt;ui_id&gt;015ad7cc-e942-4b3d-b786-caa1b665dab6&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1YXW/bOgz9K4Gf01w5/oiTt2JFgQ67d0Db7aUpDFmmEw2K7Nlyt9wg/32UJSdu0mZBl6HbsJcAokTykDykpdytHJ46E2cUZUMYj4ckcQnxCIkCRiIPEm8UjjzKiNN3JF0AniyB5WWK6wcqai1YrW6gfOAMem+ooiKfxe6ghM81VCrmChbrNR5OeVUIuvxodVDC5lykJUhncnffdwpaonkFpTNZ7WypZQGxoAkIVLzIWb0AqXpXF2jjWOit9nWLfTcW7QPXqbUecy3ELY2H9B34qkCmgN4yKiroOwsqU6ryculMVFmjoASavpdiuTkx51KZQBf0a8X/R/PeUJ/LACNjNgmbZWwT1OYmx3y+LxTPpZEomog2cbmoF/I/E4FOLWS0FqqT2rpCe1BoyBqEQZjdzPMv162/Sy6b4CxakTMqNiuqVMmTWkGlqwECmpwsaFFwOYuLMn/gjTJCWQxmAheDTORf0GfFZ3JAmcY9wATRwSXKLxrxR1pyHcS/aAaV103w8eda+zVhWMBxE7MJGE9VrOSFOkebD2ARrvuWtQk7WHq2rbQxtyVtxWLkaMPPfXZeG/ZC2rsy+y/j6q322WsK1T8a7yPlffyWqM0ylsa05al7mKdWcgxRI/I6RLWIfjOmfo+k4IdegD+jzCPu0CURhFHExoSyKAwD39sWGf0hYiqQmrRC21u6nnCC3mDG5Kxl5BHgWsVzi6533aJ7FrZladW6sgwdnoyhbvibUrTmtzu5MZJ3u9X5OVzW7j5IjuPtSlc/HCbhmETpWZqR5MyPvOCMMiBnELoBBGnIAtf7Yf4T99DQS6MniJRxEN0rRrux3wadnZe1w6V29WhIH4F3ryUuLeDnArEN0Sx3xvbpmiIi5JW64s+9YbCDZIDO8P6U16U8wN14zqumpM9yuHPiVFw+An6r/Nbg36XyblgHmOz9ZfIvzGQ/OEgFeGJ6sVymXOOrOnw2Mw+qc7n8cLdaVYoqzgZh5IbZaMwYoRFxQ5+4LKCelwDxE/B9d72+3yf+j5h6WYds7zC1gKrtkiNSs3lBWr2DqbI9sr0XWSXbJ/6pHpSv1yZ/5k2dHeRBNt7WPa0xHVR1X5SrqWNATp3J1JG5hKnTnzr6VKwJ0YjxBILbbDSy1dqs65Jadbez3OqmdFk1Jys2hxQp1UgfSQzPrfyUf7vcWAe9C0T9zy3vfGG+n7PNfze10X8yje2ToY3E5I13vy/Byb4v/t+22XkUxJuLNH5OcAC9uJfuvwGVpe3pUhQAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=ec89f9202f528b1076c014807fa4e304"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;8&lt;/order&gt;&lt;parent_ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 07:55:57&lt;/sys_created_on&gt;&lt;sys_id&gt;eddcb1e42f528b1076c014807fa4e3dc&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:31:12&lt;/sys_updated_on&gt;&lt;ui_id&gt;63eaf33c-f729-48f3-b80c-21c184575d97&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/9VUW2/TMBT+K5Wf08hp0vTyNgn1CTYJ0F7GZjn2SWvhxJnjdC1V/zvHcdqNQaUJIRB587l933cuuTsQJcmS5AnQ6SLJRZqk6YTSyTxLijwtkolMOUBGIlLzCjDS8UID6x8R2XLdeeOOTZKM0mnONC8YPDLKeNNYg36mzRojpWobzfe3Q8LV4B29771io7S0UJPl3X1EGm6xvANLlodXLrdvwGOAxiKfPZXRdaDyVhk/JF+Q5VFe24yVnhCNCOwc1BIQr+S6hYhUvJbcGbsnS2c7NFjg8qbW+3PERtUOCxIfu2vVN6w+pz6uBJQmIPjOTzZ0K5jFxigBN41Tpg6WntjgNLqr6usgwvcZSt5pd+ozWroW60HjKXsSA6Py08Y8fTwBrlTdqxuc2giuzy/unFVF56D18wANFRZiFQ5Y1Wvm56j6ZORSxWuNj7jU5glBW7WuYy488Rg7xOMV2t/15ltulVfxActg8rFXzx47jxt0DIxZEI0BrbCqcVdYbgsDuWN02l8JdHFx8EnxPOh+ZdsXu1sY8xWFfOkoTeXhkGRpNoN8PpZUFOOMz7NxwafpeCFnclbOC5AiiS0I3Ifj8UGCUC3KC9lh50E+nJcfVUPw/XwDfw/4N88LKqTrYBQIR2/u9KnASoGW7S9af7qvAYBtB4DhxpI/dWNJTvvv31xa4PmfHdqLf96Fk7v/DgiTXQU0BgAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=eddcb1e42f528b1076c014807fa4e3dc"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT IN2869abe82f9e8b1076c014807fa4e3a2,668d79282f528b1076c014807fa4e354,ac69abe82f9e8b1076c014807fa4e3a3,b9ca71282f128b1076c014807fa4e38f"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;3e692fe82f9e8b1076c014807fa4e388&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Top Level Try"&gt;e9060aa2c3013010ace8b740ad40dd51&lt;/logic_definition&gt;&lt;order&gt;0&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 15:50:11&lt;/sys_created_on&gt;&lt;sys_id&gt;2869abe82f9e8b1076c014807fa4e3a2&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:50:21&lt;/sys_updated_on&gt;&lt;ui_id&gt;d99b275d-5215-47f0-93e1-bbf043777cba&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;6f2cc2242fd28b1076c014807fa4e383&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;9&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;d99b275d-5215-47f0-93e1-bbf043777cba&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 07:59:01&lt;/sys_created_on&gt;&lt;sys_id&gt;668d79282f528b1076c014807fa4e354&lt;/sys_id&gt;&lt;sys_mod_count&gt;24&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:50:22&lt;/sys_updated_on&gt;&lt;ui_id&gt;3a0d9a7b-bb38-41b5-b6cc-b6ae3bb20d25&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;9f692fe82f9e8b1076c014807fa4e3d8&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Top Level Catch"&gt;35d60003e6022010a5e40cdd1254dd23&lt;/logic_definition&gt;&lt;order&gt;11&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 15:50:11&lt;/sys_created_on&gt;&lt;sys_id&gt;ac69abe82f9e8b1076c014807fa4e3a3&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:50:23&lt;/sys_updated_on&gt;&lt;ui_id&gt;52e087b1-c468-4654-9a5a-8e96fe507ff1&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1ZbW+jOBD+KyfUjylH3tN8q9qLlNO1lS7Z/XKskMFD4j0Hs2DSdqP89/UYA4G0vTab7t7pIlURzHiGmXkeZmy6sUQm40ymc3GZpmwRWeO/PrUsFqFMXW8sRq2x5YTDDumTTt9vdztO2/EHbSDqojsctYNh78JqWRFZgVrpeakkMks9T8nWhGco3LjWGpKUici1xq7Vth3XarlWIFYxh4c7/zMEUmk2KKKQX50F6+JCG30ma2JzEi3smUxYtNAeztZa51rbrbpbQZqSxYH222ZAs2AJK5L7mHBxfw1YH0jGk+vLq/n07nY2v5x/mNXidq1pJGEBicmPgn0WMuDUC0kAMs0Xzxg+5obEExRqs43rulbG5o8x/EF84Hg7xp/Cn4se1U8ChHoi4o/lipDwFEr9kkWyVJXS3HMpZw2nFEKScelpvPateS2iK0y1UJFAKlQ9SBKReDmVyoUyyaqFKxJRIkXyXNwioXlAWtfesXvwOEQLuSyVPQd/t+qvhrmqawWsEX9v9Y3HoxY/rft8U+1vTLbvXP7Oy+V3SgAQgRfeDftMqsxfVf03leFSp/3LTHea4xcjYx8i9iWDKa2SJjT0h35wfkEHw/PexYiej0bUOR/RQdCl/VEvBNoAvM4k0+SKJYHwdGmwa5ZrGo2lWAscVhBJb0XiWDHHixOxZrtwqbZlL7gS2aHCwqMaDDsvh60yJXaF0UeSMOJrBOJD2kqUcf4Uq0U9vze8zoN+g1ApqBA5+0ow/olIViTnye+zu1u1RM0VytKYk8ePp/FyGi+n8XIaL6fxchovRxwvwZJxmkBUnX+q8w023Z2Tzf4wqturs1RMEmUqIVEEbagydp0bY67K1jRO5UKjp1mpxNNSXARTaK7yaOqxyaYzXS1r3G5Z8CAhoqC86Pq3Kq6WEoTqTiFVChCb/Kmquin7qnz3HFwXgkokMDmXt56pR1EKwQK4i7HWuUQiPYxS8GwV3ebBYyXzl3SnkkZyvVfiLFUPghiTwehMqOFsKe7/LCKZsEjnbZRcBISXd0SqPulnEtQpd7PV8XtfMlyQP9e49vKw1YI0SFgssTWsofSSC9HDtrVHFTMk3o0teadvkmVWSJtcuSnD2YtPNhwawnSOSBjnRJk9yrwA9wY1Os76FxW939CzTXVYtNkZBrVO8cS0UnqcUxjZi4T8h7CbjD01sf8MIw9kVdlSfh6p3r3XHZNX/79e96kBTL4dLYB5xdfjwvA3pJbZeT/zUdkAKIpHFABi1Y8E4ejHQXhcpMyLu1ue+qtcArN7QlDy+tlA6Z87FegOfeh5wDpwapabK0qHTns0DILuAJBJ/X6/6w97DqE9h1IaVJSBCB9LdzZf7f2+pDvXG3ZgNY7PlfGvEwyv4PkroiuMq/D24jX89oXgQKL3IfiPmX2hKc7TbarQ/iv2ZdjB1oaraQ42hYDhN8U5yqbFP8RQ8agwY8Gu6F4kf+PLUMm23wB/NxwcWhsAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;262cc2242fd28b1076c014807fa4e33d&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;3&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;d99b275d-5215-47f0-93e1-bbf043777cba&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 07:46:56&lt;/sys_created_on&gt;&lt;sys_id&gt;b9ca71282f128b1076c014807fa4e38f&lt;/sys_id&gt;&lt;sys_mod_count&gt;29&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 15:50:21&lt;/sys_updated_on&gt;&lt;ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1VTW/bMAz9K4HOSSDbsfNxKzoUKNCtwFL0shUGLdGJUEXyLLlpFuS/j7KdpNhadBh63CWIHinyPYoP3jPb+Krx7s5eOKdWhi2+PQyZMgGj/3tWaru9sSslro3zYAQud+5asgUr5gKmUTyLS/opIj7NBI8mMz4tYYLJrGRDZmCDlCmskcora/IWGLIn0E0IXK5RPA4uqqq2BA2WHnzjKC6VqzTs7t9JE2ulZY095wpqqu6xZov9byG/qzDXUKCmaktfK7Oi6yqoKDmU0VxEIomzJOY8nk2iIkuKKJYJICSUd7x4eZQxuGmRt/WFfoS7Yydby0Ar4kOGzx6NRGpdgnY4ZBswErytdyekRpC3Rp+BtTKeyrGQ/OzUT6odp2lILJE0CuyCp2Pez6+DxdoqgbdVINghHgrd3xFWNxvzpdMRJo8lNNofJ09I46geVoF0YNFTKpdru/16bHilTCuwD2orQJ9O4GkMRePRhYdBjRsqlG+gqmg4eXhT1V4mLpvxStNhHHaOmoZ9HIMIxMc0IxhfEf6phe+hVkHFZypDlzuaBTgl8nZ3qZyvScKhHUv+owmEOoG9lLybBiU4UavKX1CfJ+xZH4Yfu/gvdn6/51EKcirECOeTeDQpEjkqprNsJABo9bJUQpGNod/2nHp7PBy+N5wnskNpe/7wyEeV/QhPzSEt04inr3tqkr3mqdeH9oaR4neMFJ7+L33EOf9vpJdGUi7vDNFra5v/s48ewuJ3HVy3NxKFckTkLmDXx+9MCOxoAYLbztDW1o9Bwhk7/AIZYSkYsQYAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_c9dfdb982f9e0b1076c014807fa4e3a9&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 20:32:12&lt;/sys_created_on&gt;&lt;sys_id&gt;3150a31c2f9e0b1076c014807fa4e331&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-21 20:32:12&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_c9dfdb982f9e0b1076c014807fa4e3a9&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 20:32:10&lt;/sys_created_on&gt;&lt;sys_id&gt;9d50a31c2f9e0b1076c014807fa4e304&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-21 20:32:10&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;29000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;internal_name&gt;lab_equipment_booking_flow&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1.record","label":"4 - Create Record➛Booking Record","reference":"x_2140056_lab_eq_0_booking","reference_display":"Booking","type":"reference","base_type":"reference","usedInstances":{"ebf0e30a-8514-45ef-a052-dd64e0ea54bf":["booking"],"63eaf33c-f729-48f3-b80c-21c184575d97":["booking"],"3935254c-58ff-4c1f-97ad-0085360a29f7":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.purpose","label":"1 - Get Catalog Variables➛purpose","reference":"","reference_display":"purpose","type":"multi_small","base_type":"multi_small","usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["purpose"]},"attributes":{"catalogType":"2","catalogTypeLabel":"Multi Line Text"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.return_date","label":"1 - Get Catalog Variables➛return_date","reference":"","reference_display":"return_date","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["return_date"]},"attributes":{"catalogType":"10","catalogTypeLabel":"Date/Time"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.booking_date","label":"1 - Get Catalog Variables➛booking_date","reference":"","reference_display":"booking_date","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["booking_date"],"63eaf33c-f729-48f3-b80c-21c184575d97":["approval_date"]},"attributes":{"catalogType":"10","catalogTypeLabel":"Date/Time"}},{"name":"015ad7cc-e942-4b3d-b786-caa1b665dab6.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"8a6f1f14-c55a-438b-bcae-87292d7919d0":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2.Equipment","label":"1 - Get Catalog Variables➛Equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"Equipment","type":"reference","base_type":"reference","usedInstances":{"015ad7cc-e942-4b3d-b786-caa1b665dab6":["record"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["equipment"],"55e19531-a1bf-4fb3-89be-f953f7509a1e":["record"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for","usedInstances":{"7b8abc04-2b12-4d24-a548-b5bc68200672":["requested_by"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["requested_by"]}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.requested_by","label":"2 - Create Record➛Booking Record➛Requested By","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"requested_by","usedInstances":{"ee37fc0f-45df-47e5-a04a-e343a70a9a75":["record"],"681ccacb-6e1f-46ed-bf4e-6f5015ed442d":["record"],"66c6c099-fb4b-4433-9450-41112140489c":["recipients"]}},{"name":"Service Catalog_1.request_item.request","label":"Trigger - Service Catalog➛Requested Item Record➛Request","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"request","usedInstances":{"06b2f648-b7b6-41bc-81f7-f1d11b6dc46c":["approver"]}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.number","label":"2 - Create Record➛Booking Record➛Booking Number","reference":"","reference_display":"Booking Number","type":"string","base_type":"string","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"number","usedInstances":{"8e28068e-e970-4c25-bf0a-05420ff16f49":["booking"]}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record.equipment","label":"2 - Create Record➛Booking Record➛Equipment","reference":"x_2140056_lab_eq_0_equipment","reference_display":"Equipment","type":"reference","base_type":"reference","parent_table_name":"x_2140056_lab_eq_0_booking","column_name":"equipment","usedInstances":{"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"]}},{"name":"7b8abc04-2b12-4d24-a548-b5bc68200672.record","label":"2 - Create Record➛Booking Record","reference":"x_2140056_lab_eq_0_booking","reference_display":"Booking","type":"reference","base_type":"reference","usedInstances":{"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"],"06b2f648-b7b6-41bc-81f7-f1d11b6dc46c":["booking"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"System Administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"d9733aab-9037-4459-a256-27dfd4e193bd":["approval_conditions"],"015ad7cc-e942-4b3d-b786-caa1b665dab6":["approval_conditions"]}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{"d9733aab-9037-4459-a256-27dfd4e193bd":["record"],"5f682e3b-ab7a-47e5-8ce8-08e2050e171d":["record"],"681ccacb-6e1f-46ed-bf4e-6f5015ed442d":["record"],"7b8abc04-2b12-4d24-a548-b5bc68200672":["equipment","requested_by"],"7bc4c5a3-575c-417d-9d9f-1a08a5a77b33":["condition"],"190cc57a-d5fb-4c74-8cba-69f53fcdf3b2":["requested_item"],"015ad7cc-e942-4b3d-b786-caa1b665dab6":["record"],"14347e68-d0cb-4a84-ba53-9d7d7f8bedc1":["requested_by"]},"attributes":{"default_search_field":"number"}},{"name":"Service Catalog_1.table_name","label":"Trigger - Service Catalog➛Table Name","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"test_input_hidden":"true"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Lab Equipment Booking Flow&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Lab Equipment Booking Flow"&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 22:02:51&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;ed15ffd02f524b1076c014807fa4e355&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:39&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=ed15ffd02f524b1076c014807fa4e355"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=ed15ffd02f524b1076c014807fa4e355"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=ed15ffd02f524b1076c014807fa4e355"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=ed15ffd02f524b1076c014807fa4e355^sys_idNOT INbd15ffd02f524b1076c014807fa4e356"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;ed15ffd02f524b1076c014807fa4e355&lt;/id&gt;&lt;name&gt;Lab Equipment Booking Flow&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 22:02:51&lt;/sys_created_on&gt;&lt;sys_id&gt;bd15ffd02f524b1076c014807fa4e356&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-21 22:02:51&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=bd15ffd02f524b1076c014807fa4e356"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=ed15ffd02f524b1076c014807fa4e355^sys_idNOT IN3515ffd02f524b1076c014807fa4e358,8615ffd02f524b1076c014807fa4e398"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value&gt;sc_req_item&lt;/default_value&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/model&gt;&lt;model_id&gt;ed15ffd02f524b1076c014807fa4e355&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_ed15ffd02f524b1076c014807fa4e355&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;true&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 22:02:51&lt;/sys_created_on&gt;&lt;sys_id&gt;3515ffd02f524b1076c014807fa4e358&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:25&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3515ffd02f524b1076c014807fa4e358"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/model&gt;&lt;model_id&gt;ed15ffd02f524b1076c014807fa4e355&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_ed15ffd02f524b1076c014807fa4e355&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 22:02:52&lt;/sys_created_on&gt;&lt;sys_id&gt;8615ffd02f524b1076c014807fa4e398&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:22&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8615ffd02f524b1076c014807fa4e398"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=ed15ffd02f524b1076c014807fa4e355"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=ed15ffd02f524b1076c014807fa4e355"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=ed15ffd02f524b1076c014807fa4e355^sys_idNOT INa61533142f524b1076c014807fa4e318"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Service Catalog&lt;/name&gt;&lt;published_version/&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 22:02:55&lt;/sys_created_on&gt;&lt;sys_id&gt;a61533142f524b1076c014807fa4e318&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-21 22:02:55&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Service Catalog"&gt;c43a1011c36813002841b63b12d3ae15&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/61T32vbMBD+V4KeNvDATtZm8dsYFALdCk3Xl1KMIp0SMVlyJdmtF/q/7y62k7TzxqB70/38vrv7dLdjhq/BsJxd13ZyYdzjZGlZwrSN4C03N20FGBRbpwWgv3tc6hBZfrdjagUPNVgM5R+yhKlbbmrKX3PxY+NdbSXWqMsTCEUQ2k6OGZN3EhSvTXxPucuSb6gDvVdgQESQLFfcBEDP93BqfdUhaLvpHc/Jn/ko5+HvfF5mvIHFfcJKbiWPzrfHJO/KGygrwyMcnM5L8CzP0jRhDRFdtWEpO1TLS8L3tS2IYaHpKE0/DT6lDtisvT16xFYb6cHiXZBCxT12iNR/9yqkCeI8XaRiPl3M59N0NktTdbZWQgkx/5Sl59nZAhuOC2OUWHylktPJ4CmClScL+307Hri8subo2KL8uqlK/hT0T2z+MaU8Bb67LsUOZtFvY1gEsQh7fZp/V14zJt1+kJS0NdbrhWqaMbENqyBd9Ghf/j/B7M0Ep0SwW91VFbVDsbAZnZavDdWENnQH9yCwpIhebzZYiEXO1KX9NqaLnv2JSuuA14KKFEEnHr7Hauser4dzXmi7p9QHjRPcHCweEXldR9rfjnHZcKwgRUePGM97VRQPNVXs/8mAVewnooQgvK7iZxF1A4dP+wt8tA/9CQUAAA==&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;service_catalog&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=ed15ffd02f524b1076c014807fa4e355^sys_idNOT IN6dbc06642fd28b1076c014807fa4e30d,79bc06642fd28b1076c014807fa4e372,79bc06642fd28b1076c014807fa4e374,7dbc06642fd28b1076c014807fa4e375,e9bc06642fd28b1076c014807fa4e30b,f1bc06642fd28b1076c014807fa4e375,fdbc06642fd28b1076c014807fa4e373"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Ask For Approval"&gt;f8f2e9920b10030085c083eb37673abd&lt;/action_type&gt;&lt;action_type_parent display_value="Ask For Approval"&gt;bae0a1120b10030085c083eb37673a92&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f8f2e9920b10030085c083eb37673abd&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 09:05:19&lt;/sys_created_on&gt;&lt;sys_id&gt;6dbc06642fd28b1076c014807fa4e30d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:19&lt;/sys_updated_on&gt;&lt;ui_id&gt;015ad7cc-e942-4b3d-b786-caa1b665dab6&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1YXW/iOBT9KyjPlHXIB4G3qqhSV7szUunMS6kix7kBr0zCxE5nWMR/35vY+RhoGdhlHrqdl0q+vtc593COP/q4tXhsTaxRkAxhPB6SyCbEISTwGAkciJyRP3IoI1bfSukKMDMHluUxjp+pKMrAdjuD/Jkz6N1QRUW2CO1BDl8KkCrkCla7HSbHXK4F3Xw2NRhhSy7iHFJr8vjUt9Y0x+UV5NZkuzd1Kj5BIxCYel8D3AesNutyHGesWEGK4OrgH6ZyamZ6d1OcwaISDulb8E1BGgPiSKiQ0LdWNI2pyvKNNVF5gYEcaPwxFZsmY8lTpftc0W+S/40fdoZlXgLYGDMcNMPQ8KPDyRSJnOHKTBV5Q1eGFEtNSQwJLYS66cZ0wse14lmqSxSNRF2diWKVftCEWM0CnZ+jkAgC1mWfJXLdVjJbZl/va5C3PK0YMS2KjFHRjKhSOY8KVcLZWiCgonhF12ueLsJ1nj3zqhihrAYLgYNBIrKv+E3JF+mAshL3AFmlg1uMT6vwZ5rzsok/cRks3vUtuZE3gkrZtoIchl+KEoluzLQQVixoCso6lvO1usavPIPBvOsb7UfsqLZYKyW9XCt9yUJUeqXyQ43faw9A3LvT8+cp/gRUteIfDKw9lEbv1TCs5r6Xe1XW+6AnjNrt42o3kVbuWicvqD0gb0jtpq03L/cfKR1c3/HwzyhxiD20SQB+ELAxoSzwfc91Wg0hAuyBCtQ3lbh2q/kLbOYnwKilfW1w9O5rHK8CNHKX+MOkiz2pz+qgkfnwTJm/vqvb/nsSesEf9ljWkQOef44jys99Sjnuq3eljvxh5I9JEF/FCYmu3MDxrigDcgW+7YEX+8yznZ/gImIf25nj4AWRJhxE985UTxyaqTNznqlOQHVgqlsD6zW4xlLV8KUTpKrfO0EuZ62AkLfkrfd0ZWJHxQadg+SvrMjTIw4Il1xWynjVCZ2M8xxxAsjaEb9rlPuG2Af/b/zg/PLD/98PrndUap3LeaNqlqUxLxHLjiv0zgzyOt18etxupaKKs4Ef2H4yGjNGaEBs3yU286jjREDcCFzX3u2eDu3zX5Y6z2cnNN+8zQsB8kdkGJe1NzxT1HVaey80k8Zt7qVe62/MbO/lBcOOai0Zt9qKCySIqu5zfTu3NOy5NZlbaZbC3OrPrTIrLMVVhTEDwTUTVWy70+Mip6bc7gzb2phuZJUp2RJiVGYV/S4SVlYw8Uv8Z+wERmr3TQvoTTUlhyTVz6cap2aFH5xxM5NQrfTbA++edd7Fzjr3l/ku8VgKm+cEHmS4913QkU//ALFYx8k7FgAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=6dbc06642fd28b1076c014807fa4e30d"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2de05916c31332002841b63b12d3aee1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;4&lt;/order&gt;&lt;parent_ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 09:05:19&lt;/sys_created_on&gt;&lt;sys_id&gt;79bc06642fd28b1076c014807fa4e372&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:19&lt;/sys_updated_on&gt;&lt;ui_id&gt;14347e68-d0cb-4a84-ba53-9d7d7f8bedc1&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1V32/aMBD+Vyo/hyghQAtvGx1PWyutU1+6znLsC1hz4mA7tAzxv++cOBR1rTakaVKl5c13933+7ocvdzsiBZmRSQrJeJpOeJZm2TBJhhejNJ9keToUGQMYkYhUrASMdCxXQNtDRDZMNd74SIfpKEnGE6pYTmFNE5pr/V1WSwwS0taKbW9D7PuDg6+kEgYqMru7j0jNDJI6MGS2e+b6U4l4OSgM/eI1viLZbesXbR+PsWdXnUMb4fUkEYFHB5UAFFIwZSEiJasEc9psycyZBg0GmLiu1PYQsZKVQ0LiYx+t/IHXXiQ+rgDMjEPnOxxpqFNnLi6ZYzfIzF1jQihfacnBdjURULBGufmxrQu4rp3UVQdp0wxorZqyuupKQg4EfVvQ0lgUAbXP0ysPaRQ3K/3wuVe5kFVbkuBUmjN1ODHnjMwb5/XsCCgokYiWrK6x4bQ2eiNbMGop46XCQ1wo/YCXWrmsYsa98BjLyuIF2i9b8y0z0mfxCWkQvI+I3dq5YtY+5YJFpOvGK+kyCznQrgwewo2s3Tu8YANB7j7qZ19AMn11sNL8aZDacbdHcw/rRtY+ya9NkmRit0unCefjczYQ4yIfjPj5aHDBczaYTItxVnBRZPkw/tCj9vtv4ZlQTBpOIjkGIo8BnJPqdJojHLLUjam1PY0hYFoNayyPA0HzbU9xA2aDM3k2x6YqvaRpHKKodFDGT5BCG6SwjrnGdmDsN04MPrlfVsj/sv+bsp+4oH//jvoFvZCghH3hYfXbGUrstwPaPbRnGzo4z26DM2zp9G9t6XSStN8b2tVdcm9+VR/9lV9Z2vc/ATYcVL2yCAAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=79bc06642fd28b1076c014807fa4e372"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2de05916c31332002841b63b12d3aee1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;6&lt;/order&gt;&lt;parent_ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 09:05:19&lt;/sys_created_on&gt;&lt;sys_id&gt;79bc06642fd28b1076c014807fa4e374&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:19&lt;/sys_updated_on&gt;&lt;ui_id&gt;ebf0e30a-8514-45ef-a052-dd64e0ea54bf&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/9VVTU8bMRD9K5HPm8ibXULIrYWiHlqQSsWFguW1ZxML7we2F9hG+e8dr50QUVBbqZfszfPl996MZ2/WREmyILMU6NFJOhNZmmVTSqfzPC1mWZFOZcYBcpKQmleAkY4XGthwSMgj1503PrNpmlN6NGOaFwweGGVF09yreslWyrrG9BgslW01769jzscQMPq8CxArpaWBmixubhPScoOXODBksX7l+lvICAY0hn73mN+h4Pr2TduX/dzRRXA0Rno8NCHw7KCWgEBKri0kpOK15AORhTMdGgxweVnrfhexUrXDgsTHPlv1E6+dUx9XAjITEHy7I4t6BXN5xh2/wsrCdSaGilWjBNigiYSSd9qd7ttCwGXrVFOHlIFmzG50V9UXQRKyK7BtD1o6iyCg9Tw98kijvFo1T9+2KM9VPUgSnboRXO9O3Dmjis55PGsCGiosxCretn4yWtM8qiEZsVSTpcbDpNTNE15q1bKecOGBT1BWPjlH+9lgvuZGeRZfsQwmbxJie3uqubUvXFBE9tB5JIFZ5MCCDD5FGNW6D3jBI0S4m2T7FiTQk3cHKy1eBmkYf7v3DuLQ/+gozeR6neZZfgyz+VhSUYxzPs/HBT/KxifyWB6X8wKkSCcGBI7VZnMX6IZc5IbqgLwzUHFzb4P100OnWq/hyD8ekKOrTmCzbdlp3d+hGmVjKpCs6EN8LMlQQQiW35/hIUD+x8Xw5/5tF8O5Ai3tGw3dbgWoUCsHLDT41WaIztF1dMbtkP6v7ZDO6PAd0I4I5A5+Rez9Dd5ZFre/AGWYWpw6BwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=79bc06642fd28b1076c014807fa4e374"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2de05916c31332002841b63b12d3aee1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;9&lt;/order&gt;&lt;parent_ui_id&gt;3a0d9a7b-bb38-41b5-b6cc-b6ae3bb20d25&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 09:05:20&lt;/sys_created_on&gt;&lt;sys_id&gt;7dbc06642fd28b1076c014807fa4e375&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:20&lt;/sys_updated_on&gt;&lt;ui_id&gt;357de864-37fc-4714-ae7b-810307e3e35c&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/9VVTVPbMBD9KxqdWmqM7UAK6SkDpT1QmGkYLoR6ZHudqCPLRpJDUib/vStZDimFfsxwwReP9kvv7e6zr+8pL+iIDmOIDo7iYT6IB4MkipLD/TgbDrI4KQYMYJ8GVLIKMNKwTEDqDgFdMNFa4zJN4v0oOhimgmUp3KZRyppG1ehPRT3DyILrRrDVlU8Yey85c958zkWhQNLR9U1AG6awvAFFR/ePXP8KFmGAwNBLi/YZ8GbVPGk7284l552jVoXFEwUUlgZkAQikZEJDQCsmC2ZqtaIjo1o0KGDFhRSrTcScS4MFqY1dav4Drz2MbFwJyCyHzrc5pr5Znbk8YYZNsHJuWuVD83nNc9BdTwooWSvM8batC7hoDK9ll+Jo+uxatJU871pCNwX62aCl1QgCGsvTIvc0ysm8vvvaozzl0rXEO0WdM7E5MWMUz1pj8dxTEFBhobTCpeByltrZc5eMWKpwJvAQlqK+w0s1n8mQ5RZ4iG1l4SnaT5z5iiluWXzBMpi8Dqhe6WPBtH7ggk1Mb1uLpGPmOaRdG2xKrnhjxnjBAjzcddCroIDo6NnFirOHRXKLr7cUUEDONWKetlE0wH39DrmB4ttGBUgFOl8SJcPd6P1ukngvqM7xu0pepuh/iuvvPejFdcpBFPqJpvTKggrZGEi7Jj1Sl3eSK+/0CotfSmHxMHLPK9JZR+7Vy2zri/q04HqjBf3LMlvDH+Pp3s5U7uyMc5yAJhbz3tiRIJYEaTXyJmYOpCxSZ6kzK5qQTFwBUrXaEAU4YUkYcXsZElvxwm4fkW2V4YtrUpelBkOyFXkXEy7JR6VqRT7jIgp7xQS61jkwC8aF+1fUbg808XtF2gaBNQqh2pwpDaeUsBK118Oz6bBkqAQYIRpF9LxWBseQk06+fWCIc57NQIV5q3AtTOgC7RwdL7z1g63lmW2qWOPeVEq4I5/s9HHF4ZJX8OYtTk2zBRT9Mj58QOh6vb75CUQw7iYYCAAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=7dbc06642fd28b1076c014807fa4e375"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Get Catalog Variables"&gt;330ba3abc31013002841b63b12d3aee8&lt;/action_type&gt;&lt;action_type_parent display_value="Get Catalog Variables"&gt;22f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;330ba3abc31013002841b63b12d3aee8&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 09:05:18&lt;/sys_created_on&gt;&lt;sys_id&gt;e9bc06642fd28b1076c014807fa4e30b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:18&lt;/sys_updated_on&gt;&lt;ui_id&gt;190cc57a-d5fb-4c74-8cba-69f53fcdf3b2&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/91V227bMAz9FUPPRmDn1jZvW7cCA7YVaIa+DIUgyXQjTL5Ul2RZ0H8fZcuJm6xpC6wD1sdQpHkOyXPyfUNkRmaE5wlnI8bFKE3SUZIMT8cpn454OsxGDICRmJSsAMzUcOfAWMiotFBgfMmU8w+bzRz0UgqIzpllqrql6SAkN6n395icSVMrtr4ONRgRC6kyDSWZfb+JSc00trGgyWyz9/RcnIpxUJg6d7yQFoFGVy2KIxzsum7jOWA/ASH0OXzqqhevdObRJTGBnxbKDBBWzpSBmBSszJit9JrMrHYY0MCyy1KttxkLWdqWdsF+GvkLm46Gca/vjBhBEV4HbPtCw+QaNAF99KlNyj/gwOfYUlint2OtcBWmHV0GOXPKnvdjbcJlbWVVtiWWcdVVV8oV5dd2WmT7gd7anEFIUPsBeEqBXz5fVKvttC5k2cwqPKpKMNVLBabF4kKC8ostXcExNybMWi25sx7nhoCCAhvQgtW1LG9praulbD6KGIvBrcIfg1xVKwRj5G05YMITGuAe2OAC4x+a8DXT0rP7gp9pulS4FZrpqq4Dab8wch8Tszbnihmz444roHfOI28nETjTdmy+RGhZ23fYeAmB3n3c6Yofu9c83d0krhL3a4GKoJ49eeX5lE34RAzzCSQ8TU6mIknHp8lJzsYwyrJDcYU7ifCKo493TtZ+ki9X3NMMOsV9CxQ6A2ju00SoiqhbQDQHa54m/XI9pq+mR0vxJh4ANBQ/TJeBEjUtpT9J9elBvAnt+l7/SrnSoD8WFd5Mw5n2d9WIGAWJRHArHuIuuMB+VLvSygJoIyoqS1rVZilh9XoGcHJcPic7LXQX1t2V6Yl/POXZGZ+Mh/nZH8Q/mcz8WSIZP0FawiqeThJI87NHCkAcFHA2xQ5Z8kgBPyjAqxKTUfpIhzTbLzj0p7dB6mVu+oxz6Ny0847r3j0cOZVgmUY5s+BO/AC7Z5pz/xK9756Cbw6P+2aIPMc402GSJA+98xFX/F9t76HBoRHl+N+Fs9vtAW8CmkmSpgSbvpYNPsvO8OhKoRxmFjgKqbHLFqr/+9mm+dH0QICmK9122qbUGmv00v/dKRC2Idn5beW0CH6M0X2N/D1TvfkNVKl8m68MAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=e9bc06642fd28b1076c014807fa4e30b"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2de05916c31332002841b63b12d3aee1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;7&lt;/order&gt;&lt;parent_ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 09:05:19&lt;/sys_created_on&gt;&lt;sys_id&gt;f1bc06642fd28b1076c014807fa4e375&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:19&lt;/sys_updated_on&gt;&lt;ui_id&gt;63eaf33c-f729-48f3-b80c-21c184575d97&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/9VVW0/bMBT+K8jPSeQ0aXp5QyCeGEhj4oUNy7FPWmvOBccBuqr/fcexWyoG2ibtYeTtXP1955a7LVGSLEmRAp0u0kJkaZZNKJ3M87QssjKdyIwD5CQiDa8BPS0vNbBRiMgj14NTPrNJmlM6LZjmJYMHRhnvOtOinel2hZ5S9Z3mm9sQcBqsJ5ejVayVlgYasrz7FpGOG0xvwZDl9pXpT8EiDNDo+sWhfQe83XRv6i6PY0+uvKE10uGhEYFnC40EBFJx3UNEat5IbluzIUtrBlQY4PK60ZuDx1o1FhMS5/vcqx/47Jw6vwqQmQBvO4gsFMurq3Nu+Q1mFnYwwVWsWyWg9zWRUPFB27NjnXe47qxqGx8y0gzRrR7q5sqXhBwS7HuDmqFHENA5ng55oFHdrNunz3uUF6oZSxKMuhVcHyRurVHlYB2eLQENNSZiNQ6FalbM9V6NwYilTlYahaTS7RM+2qtVk3DhgCdYVp5coP58VN9yoxyLT5gGg3cR6Tf9meZ9/8IFi8geBofEMwscmC+DCxFGdfYUH3iEAHcX7bdAAl28O1hp+TJI4+D3RxtQtu13pPZ1oDST222aZ/kMinksqSjjnM/zuOTTLF7ImZxV8xKkSBMDAsdqt7uXIFSPhH203xyQ94cVwjrAIfOCCjGd8VhOK8wsZnk8FyWPi0U1zSohq6ycJAHNGLjb/bp+/znavzwHv+/a/hxcKNCyf6ON+1sANZbJAvNtfXUPgvHkNhjDTUj/1U1ICzp+H+gyeHIf/jAc/QPeORHffgLm3ae4KgcAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=f1bc06642fd28b1076c014807fa4e375"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;5&lt;/order&gt;&lt;parent_ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 09:05:19&lt;/sys_created_on&gt;&lt;sys_id&gt;fdbc06642fd28b1076c014807fa4e373&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:19&lt;/sys_updated_on&gt;&lt;ui_id&gt;55e19531-a1bf-4fb3-89be-f953f7509a1e&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+VVXU/bMBT9K5Wf28pp2tL2baJUmsRAgokXhqIb26GWHCf4o9BV/e+7SZwSFcZA4gWtD5V8v3zOyT3J7Y5IThZkLDiN5tGUxVEcjygdzcZROo3TaMRjECIifaIhF1hpBCsMx/MGlK8Cu100p4xNTmDAJ1k6GLOT8WDGUhhM59kkzhjP4nQ0PHvwssyFdvs9NnNpSwXbmzADI2wtFTdCk8XtXZ+UYPA6JwxZ7I5S78WrIBUKS69awMcE3LaszrxgvsKVyDZ4HjqXIdP7vsQMNlVwIton4skJzQUCyUBZ0Sc5aA6uMFuycMZjwAjgl1ptDxVrqV1DNIcnK3/jzWNa1WUCmbEgwuGYBIGacLYEB9c4mTlvDnoVkgnbaMJFBl65026sKbgsnSx00+IgVW13oXyuLxpFyGFA53l4iyBEWfGskDe0sut18XjVglxJXUsSKKqCgTqcwDkjU+8qODsilKg1zqEspb5PSlNsZN2MUPLhvcLDMFPFI95p5b0eAqtwD1FVGK4wvqzDN2BkReIHjsHmfZ/YrT1VYO0zFdQwefAVkoZYoJDUKtQSJPUmVM3MyNJ9w6s2IgDf94Mj0slbG8bmzwvVmfnsiqdkFI0pnUwT3MNEPCQU/4IDXu7/WSf1MSO8A2ZrhJ/1438ddvDCi9h5t7d30SSCEyaf5oTZV3JCoPHlrfAvA9DRm6/YzibVO287y28dOG9/eUpj7jVsQKqwe0d7//fCj7ngHVhbF6ykUNy+Ar61gMgRoRNJQ+bIBiHZuwnJw0fh07wQTWn9+0KO+G++DXd/AIWau0EvCQAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=fdbc06642fd28b1076c014807fa4e373"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=ed15ffd02f524b1076c014807fa4e355"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=ed15ffd02f524b1076c014807fa4e355^sys_idNOT IN1abc06642fd28b1076c014807fa4e379,82bc06642fd28b1076c014807fa4e377"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;6f2cc2242fd28b1076c014807fa4e383&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;8&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 09:05:21&lt;/sys_created_on&gt;&lt;sys_id&gt;1abc06642fd28b1076c014807fa4e379&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:35&lt;/sys_updated_on&gt;&lt;ui_id&gt;3a0d9a7b-bb38-41b5-b6cc-b6ae3bb20d25&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;262cc2242fd28b1076c014807fa4e33d&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Lab Equipment Booking Flow"&gt;ed15ffd02f524b1076c014807fa4e355&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;3&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-22 09:05:20&lt;/sys_created_on&gt;&lt;sys_id&gt;82bc06642fd28b1076c014807fa4e377&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-22 09:05:34&lt;/sys_updated_on&gt;&lt;ui_id&gt;8a6f1f14-c55a-438b-bcae-87292d7919d0&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1V0U7bMBT9FeTntHKSJm15QyAkJDakFfGyoejGdloL185iB+iq/vvuTdIWbUwMjce9VPW59r3nnN6jbplrQ90Gf+vOvNdLy06/3kdMW8Lw+5ZVxj1du6UWV9YHsEItNv5KslNWzgVM42SWVPhRxnyaCx5PZnxawUSls4pFzMJa4U3hrNRBO1t0QMQewbRUOF8p8XByVteNQ+hkESC0HutS+9rA5u6Na2KljWzUwLmGBrsH1bDT7S8lTXwrDlU8F7FIkzxNOE9mk7jM0zJOZAoKUmxooFSGBu4Jn1x3yJ+VhE1NuA+NtsvhfD10WexB10hiFfOIqeegrFTIpwLjVcTWYCUE12wOSKNA3lhzBFbaBmzH6PKz1z9wYJJldLFSKFGovng4FoN9PVxdQACk0orQNsNVsXJaKN+bI1UFrQnnL7H+wk1NUvsnAUqzf+1Mu7afe0fYocH+10Kk9UhC1aSUqA86qsXKPX3Zs7zUtnNlKBonwBxOENC7sg3EZ8uUUWtsVKyhrtHRgvZAd4+Ry3q8NHgY057iUNrhMQgiPkZjYXyJ+EUH30GjScUnbIOPe5oleC2Kbt+xHdqk2C5ifuPPDXh/FInuFt9bothLHsQVvT/0RDS6Dmc4+VENOnbRx8bnRXK2Wx5nIKdCjNR8kowmZSpH5XSWjwQArnWeSSjzMQyZKXB2ULvdt5bzVPYoLuFvSfuotu9L5hyyKot59noyJ/lryXzdnvfEMXkjjrQLf5lGzvn/OP5zHLUv+hAN2rrhH5jGe4pPP/PgtdAeqd0SdrX/z6PCBpeLMnuEnlzzQKKO2O4newnV2z0HAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=ed15ffd02f524b1076c014807fa4e355"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=ed15ffd02f524b1076c014807fa4e355"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_ed15ffd02f524b1076c014807fa4e355&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 22:02:52&lt;/sys_created_on&gt;&lt;sys_id&gt;0215ffd02f524b1076c014807fa4e394&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-21 22:02:52&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_ed15ffd02f524b1076c014807fa4e355&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 22:02:53&lt;/sys_created_on&gt;&lt;sys_id&gt;8615ffd02f524b1076c014807fa4e39f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Lab equipment booking"&gt;63e16a042f1a871076c014807fa4e3d6&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-21 22:02:53&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_ed15ffd02f524b1076c014807fa4e355"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_ed15ffd02f524b1076c014807fa4e355"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/sys_id&gt;&lt;latest_snapshot&gt;ed15ffd02f524b1076c014807fa4e355&lt;/latest_snapshot&gt;&lt;compiler_build/&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=c9dfdb982f9e0b1076c014807fa4e3a9^sys_idNOT INdd2533142f524b1076c014807fa4e36f"/&gt;&lt;sys_flow_trigger_plan action="INSERT_OR_UPDATE"&gt;&lt;binding_strategy&gt;com.snc.process_flow.engine.binding.RunAlways&lt;/binding_strategy&gt;&lt;plan/&gt;&lt;plan_id&gt;c9dfdb982f9e0b1076c014807fa4e3a9&lt;/plan_id&gt;&lt;snapshot&gt;ed15ffd02f524b1076c014807fa4e355&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-07-21 22:03:06&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;dd2533142f524b1076c014807fa4e36f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-07-21 22:03:06&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;5d2533142f524b1076c014807fa4e36e&lt;/trigger&gt;&lt;/sys_flow_trigger_plan&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=c9dfdb982f9e0b1076c014807fa4e3a9"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>484911036</payload_hash>
+        <record_name>Lab Equipment Booking Flow</record_name>
+        <reverted_from/>
+        <source>3fe16a042f1a871076c014807fa4e3d8</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 15:50:25</sys_created_on>
+        <sys_id>88796fe82f9e8b1076c014807fa4e365</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19f8a85653c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 15:50:25</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>48796fe89a9e8b108926ec88d691d364</update_guid>
+        <update_guid_history>48796fe89a9e8b108926ec88d691d364:484911036,753723e4eb9e8b101a4afd6547150698:-145305787,2755afa0de9e8b10c00436fe87c1d680:1885071111,2f45eba0b79e8b10abec995de6ce83fe:-1092024644,491527a0b39e8b1047d5ec6fa4434b91:915390920,96d42f608c9e8b1072c12c12e812918c:-2012323973,06146320679e8b104d32c4b402f00e34:1476757403,7851aba8215e8b105ce8ac0c53dba889:-978824054,eaff5fe4a85e8b102603fa661ed8a492:1850745746,5ecfd7e4e45e8b10b3e5d70bdd53f8bf:-1429671251,433f97a4595e8b106fac1be88dd10b49:1654521537,a03ceaa4b6d68b10db82d4a2c43e13ab:1037828760,360ca6a464d68b10784aee6625f9f175:-1525317760,4feba2a463d68b10bd63df854d3a60dd:1363972053,0fcbae648ed68b1049792e460a4ca08e:-848705165,8f9b2a642ed68b10562d998a8d44f1da:-2086771668,8a7ae2e0cad68b10a1985d2b1238ce61:462338576,3da7626c1c968b102fe818f8a70cd7a2:-1768113274,e385ae28d2968b102504e98f1260e880:1503450841,1794a2e41e968b10dd7fb60c199e779e:-2104796428,b334e6a44c968b1044f66849e5b6e109:1264400402,d004ee64fd968b10fb9f0375498fee76:1104889943,ad632e24b5968b105d73068de3fe39ed:-1937252437,c633e624bb968b1095dbaff88f4a9396:1357311993,fcc26ae0f0968b10c423caf93a32914a:1453865843,f4cad6a06a568b10f2a62466df1ec47c:2147246138,77ec8a6452d28b10aa4a57f9ad46e4c0:131788333,f99c02640dd28b106be04eb616508e68:1225082175,e73c46240cd28b1013fbd9e3cddf46ba:-109379356,9cbf3d2cc0528b1092fffbd5121eeeb2:714983699,7d8ff52c11528b102551a7eee4bffd4c:1320973872,06ad7d28ac528b10ec664dffb9b24c65:1286664655,c49db9287c528b10191d6325aa8b1d09:-1314271736,df5df128df528b100a9eb815eee506e7:1556303269,e45db128bf528b10ccf89407471d0e2f:-1723149020,68ec35e466528b10c02a7a0d1d664c86:2023159981,20dcb1e421528b10c558500ddf970623:-250851714,92ebb56441528b101fdc80f097ad576d:2139643008,8adb3564a0528b10c6f048ff8a72ed1a:1810848198,8ebbfd24d8528b10b68a9073d505f47e:-1208640821,c9ab7d2416528b102b68c90a6aaf2a12:-1594224574,de0bb9e03e528b106a81624e66dd970d:-1865280991,76fa39e06c528b10dbdf0387a38c0444:1245525566,38daf1e009528b10e449f8d02459fa24:251628944,987af5a014528b1014624f92bdde6f95:-1056853498,98993d20f3528b109a28b7d6875258f0:-1275611945,2009f9ec14128b105f7bfdc9e6154206:1589982427,4ac6b5e8ca128b10c303d513001849c3:1109818463,796679a87c128b1077a48b6cdc8fb55e:-875433431,2736b1a8db128b103284735bb1c18dff:-286548431,172631a8db128b10fcb82eee2a0704eb:-1426982580,8b2df314af924b10c2d2f8f3b4229d29:1274196842,df697f1ceb524b108e45f0d5ea3c3130:353583032,6497f358ef524b10a2f84513cfa71974:1241160258,02257314af524b105d4abe9ae94c24d1:-1796792119,2c15bfd082524b102f2ba25621c77288:366074964,5815bfd059524b10f3452cd73c9b9ca6:1082673769,7ce3fb50c5524b1092552b8775c69724:-1785934620,958077d83b124b10713dfd33a04fc40f:252336548,3e103b98df124b100ae58300f6c29b06:-603946647,e23f2f18d5124b10ba3e14886af10df8:-355674326,ad0fa71832124b10fed29f149f4dacb2:1969363619,0a4e23d44d124b10b469f82a07f10d02:2126122132,1e3eaf94fa124b101c4789c1c168250b:934911794,23fda7944a124b108554f98c9bb82dde:-612606207,7bed279474124b10e6d581609acd65b8:-225701363,3a9d6b5441124b10e18e790979745bd5:-1744839813,014def14fd124b10244f654e80f20fd2:338266501,3beba39061124b1006ee5639c3422e4b:-1044042515,cedbef502f124b10a06cabc1be14a63f:1014183512,98cb2f5087124b10d5c0306b80ea9823:-1260045964,141a6b9c77de0b106fdca636bbd1ba6c:-1766041138,900ae79cc2de0b101119cf043c28e74b:-293859446,ad3863d8d8de0b10d80b43a1ab480998:497838014,71186f98a1de0b10c2e26a8b745da38a:2103176754,c7676b58fade0b10314f7aa09efc3b53:1361559092,14866fd477de0b10897d3a8ec5f9c791:1193901370,f03627d426de0b1044b4ff10db7d023e:969604919,0bf56f940ede0b10a97e7e6d86dd85ad:968973359,b525275460de0b10889ec6897d4d33c5:241188593,45052354f8de0b1095e0473ebecdf388:354779437,0c94a314dbde0b105e7749956960cfd4:-152772823,3ad163dc829e0b1041da478fd174930c:-2001992590,ea316f5c5b9e0b100484797ee7f03edd:5739850,bd01e75c469e0b104d5c7ef4ce701ec8:1975918118,08f0675cdb9e0b100766f7e2413ef540:-282012271,28a0eb1cd59e0b10acf5930f4dc8fddd:-798252614,4670a71cbf9e0b1047d0e9b037faf0e9:-908556605,6650e31cf09e0b10b371217035050b60:-135070992,eadf93d89e9e0b107a0a98be6e2fa436:1329688973</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-22 16:08:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>8da05854bf854f04821ac137ad159941</sys_id>
+        <sys_metadata>c9dfdb982f9e0b1076c014807fa4e3a9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Lab Equipment Booking Flow</sys_name>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_scope_delete display_value="">25c21ebeec5742afa59f41f8f7284b41</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_c9dfdb982f9e0b1076c014807fa4e3a9</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_c9dfdb982f9e0b1076c014807fa4e3a9">88796fe82f9e8b1076c014807fa4e365</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-22 16:08:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

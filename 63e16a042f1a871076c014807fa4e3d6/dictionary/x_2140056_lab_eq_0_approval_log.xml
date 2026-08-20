@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="ecc672402fda871076c014807fa4e3eb" label="Approval Log" max_length="40" name="x_2140056_lab_eq_0_approval_log" type="collection">
+        <element choice="1" label="Decision" mandatory="true" max_length="255" name="decision" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Approved" sequence="0" value="approved"/>
+                <element inactive_on_update="false" label="Pending" sequence="2" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="1" value="rejected"/>
+            </choice>
+        </element>
+        <element display="true" label="Booking" mandatory="true" max_length="32" name="booking" reference="x_2140056_lab_eq_0_booking" type="reference"/>
+        <element label="Approval Date" mandatory="true" max_length="255" name="approval_date" type="glide_date"/>
+        <element label="Approver" mandatory="true" max_length="32" name="approver" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="approver"/>
+        </index>
+        <index name="index2">
+            <element name="booking"/>
+        </index>
+    </element>
+</database>

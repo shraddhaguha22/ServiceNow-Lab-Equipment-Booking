@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="INSERT_OR_UPDATE">
+        <canvas display_value="">4d97803d63ff3c5e6de5d3b3ec8be731</canvas>
+        <component display_value="Pie">96abe7e38d8790718022c5630a92176c</component>
+        <component_props>{"applyDateRange":false,"bareBorder":false,"colorConfig":{"type":"default"},"configVersion":"23.0.0-ci-SNAPSHOT","dataLabelsType":"value","dataSources":[{"allowRealTime":true,"dataCategories":["group","simple","trend"],"id":"dGFibGV4XzIxNDAwNTZfbGFiX2VxXzBfYm9va2luZzE3ODQ4MjU2NTc2MDY0NDI2NjY1MC45Nzg4Njg2NQ==","isDatabaseView":false,"preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"sourceType":"table","tableOrViewName":"x_2140056_lab_eq_0_booking"}],"dateFormat":"default","emptyStateHeading":"No data available.","emptyStateIllustration":"add-data","enableCustomEmptyState":false,"enableDrilldown":true,"enableRealTimeUpdate":false,"filterConfigurations":"@state.parFilters","followFilters":true,"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzIxNDAwNTZfbGFiX2VxXzBfYm9va2luZzE3ODQ4MjU2NTc2MDY0NDI2NjY1MC45Nzg4Njg2NQ==","groupByField":"status","isChoice":true,"isPaBucket":false,"isRange":false}],"maxNumberOfGroups":12,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":true}],"headerTitle":"Booking Status","showHeader":true,"showBorder":true,"hideMatrixAggregate":false,"legendExpandToFit":false,"legendHorizontalAlignment":"center","metrics":[{"aggregateFunction":"COUNT","axisId":"primary","dataSource":"dGFibGV4XzIxNDAwNTZfbGFiX2VxXzBfYm9va2luZzE3ODQ4MjU2NTc2MDY0NDI2NjY1MC45Nzg4Njg2NQ==","id":"ZEdGaWJHVjRYekl4TkRBd05UWmZiR0ZpWDJWeFh6QmZZbTl2YTJsdVp6RTNPRFE0TWpVMk5UYzJNRFkwTkRJMk5qWTFNQzQ1TnpnNE5qZzJOUT09MTc4NDgyNTY1NzYwNjI1MzM4NjEwLjcwNTUzMTU1","numberFormat":{"customFormat":true,"rounding":"HALF_UP","decimalPrecision":0,"abbreviationEnabled":false,"numberInTooltipsEnabled":true,"thousandSeparatorEnabled":true}}],"newReporting":false,"numberOfPeriods":2,"period":"M","registerOrientation":"horizontal","registerPosition":"bottom","showAbsolutePeriod":false,"showChange":false,"showChangeFrom":"previous","showChangePercentage":false,"showComment":false,"showConfidenceBand":false,"showDataLabels":false,"showDataPassthrough":false,"showFilterIcon":true,"showFirstGroupAggregate":false,"showForecast":false,"showForecastRange":false,"showGapPercentage":false,"showHeaderSeparator":true,"showMaximumRange":false,"showMetricLabel":false,"showRegister":true,"showRegisterOnSameLine":false,"showRegisterPercentage":true,"showRegisterValue":true,"showSecondGroupAggregate":false,"showSparkline":false,"showSubAggregate":false,"showTarget":false,"showThreshold":false,"showTotalAggregate":false,"showTrend":false,"sortBy":"value","sortByOrder":"desc","telemetry":"null","truncationType":"start","wrapTitle":true,"showDataTable":false,"autoAggregatePeriods":false,"userInfo":"@context.session.user","enableAddZerosAtApi":true,"emptyStateHeadingLevel":3,"emptyStateAlignment":"vertical-centered","scoreType":"latest","showAdditionalGroupBySelector":false,"cacheExpirationTime":0,"showLoadingIndicator":false,"useDataCache":false,"showFilterAsSeparateSeries":false,"showCacheTime":true,"hideDevSettings":false,"allowAdditionalGroupByPerMetric":false,"lineClamp":1,"allowChangeDateRange":false,"showExportOptions":true,"showRefresh":true,"useCurrentDateForEnd":false,"enableClickAndStay":false,"showDateRangeByDefault":false,"emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","headerTitleAlignment":"start","headingLevel":2,"showPercentageOfTotalInTooltip":true}</component_props>
+        <h>15</h>
+        <name>Booking Status</name>
+        <required_translations>[{"comment":"","message":"Booking Status","code":"PAR_DASHBOARD.4d97803d63ff3c5e6de5d3b3ec8be731.85c0338f852a40f1e1d8f078bc4c4068"},{"comment":"","message":"No data available.","code":"PAR_DASHBOARD.4d97803d63ff3c5e6de5d3b3ec8be731.85c0338f852a40f1e1d8f078bc4c4068"},{"comment":"","message":"There are no scores available for the selected criteria. Contact your admin for more info.","code":"PAR_DASHBOARD.4d97803d63ff3c5e6de5d3b3ec8be731.85c0338f852a40f1e1d8f078bc4c4068"}]</required_translations>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-23 16:54:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>85c0338f852a40f1e1d8f078bc4c4068</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Booking Status</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_update_name>par_dashboard_widget_85c0338f852a40f1e1d8f078bc4c4068</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-23 16:59:21</sys_updated_on>
+        <visualization/>
+        <w>23</w>
+        <widget_props/>
+        <x>0</x>
+        <y>0</y>
+    </par_dashboard_widget>
+</record_update>

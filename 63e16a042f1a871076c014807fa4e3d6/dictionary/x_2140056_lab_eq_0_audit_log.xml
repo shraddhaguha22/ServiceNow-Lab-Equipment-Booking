@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="1e20ce142fd20b1076c014807fa4e332" label="Audit Log" max_length="40" name="x_2140056_lab_eq_0_audit_log" type="collection">
+        <element label="Reference Record" max_length="255" name="reference_record" type="document_id"/>
+        <element label="Action" max_length="40" name="action" type="string"/>
+        <element label="Performed On" max_length="255" name="performed_on" type="glide_date"/>
+        <element label="Performed By" mandatory="true" max_length="32" name="performed_by" reference="sys_user" type="reference"/>
+        <element label="Remarks" max_length="40" name="remarks" type="string"/>
+        <element display="true" label="Record Type" mandatory="true" max_length="40" name="record_type" type="string"/>
+        <index name="index">
+            <element name="performed_by"/>
+        </index>
+        <index name="index2">
+            <element name="reference_record"/>
+        </index>
+    </element>
+</database>

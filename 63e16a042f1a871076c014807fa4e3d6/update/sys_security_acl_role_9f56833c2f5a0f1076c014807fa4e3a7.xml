@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-07-23 07:56:31</sys_created_on>
+        <sys_id>9f56833c2f5a0f1076c014807fa4e3a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_2140056_lab_eq_0.lab_technician</sys_name>
+        <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+        <sys_security_acl display_value="x_2140056_lab_eq_0_equipment">dc56033c2f5a0f1076c014807fa4e3ee</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_9f56833c2f5a0f1076c014807fa4e3a7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-07-23 07:56:31</sys_updated_on>
+        <sys_user_role display_value="x_2140056_lab_eq_0.lab_technician" name="x_2140056_lab_eq_0.lab_technician">15d682982fd20b1076c014807fa4e3f2</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="lab_in_charge" label="Lab-in-charge" language="en" table="x_2140056_lab_eq_0_laboratory">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>lab_in_charge</element>
+            <help/>
+            <hint/>
+            <label>Lab-in-charge</label>
+            <language>en</language>
+            <name>x_2140056_lab_eq_0_laboratory</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-07-20 22:12:38</sys_created_on>
+            <sys_mod_count>9</sys_mod_count>
+            <sys_name>Lab-in-charge</sys_name>
+            <sys_package display_value="Lab equipment booking" source="x_2140056_lab_eq_0">63e16a042f1a871076c014807fa4e3d6</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Lab equipment booking">63e16a042f1a871076c014807fa4e3d6</sys_scope>
+            <sys_update_name>sys_documentation_x_2140056_lab_eq_0_laboratory_lab_in_charge_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-07-21 05:11:27</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

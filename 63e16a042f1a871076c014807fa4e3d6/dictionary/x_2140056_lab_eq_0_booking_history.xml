@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="21b4be0c2f9a871076c014807fa4e36b" label="Booking History" max_length="40" name="x_2140056_lab_eq_0_booking_history" type="collection">
+        <element label="Remarks" max_length="40" name="remarks" type="string_full_utf8"/>
+        <element choice="1" label="Action" mandatory="true" max_length="255" name="action" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Returned" sequence="4" value="returned"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="5" value="cancelled"/>
+                <element inactive_on_update="false" label="Created" sequence="0" value="created"/>
+                <element inactive_on_update="false" label="Updated" sequence="3" value="updated"/>
+                <element inactive_on_update="false" label="Completed" sequence="6" value="completed"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+            </choice>
+        </element>
+        <element label="Performed By" mandatory="true" max_length="32" name="performed_by" reference="sys_user" type="reference"/>
+        <element label="Action Date" mandatory="true" max_length="255" name="action_date" type="glide_date"/>
+        <element display="true" label="Booking" mandatory="true" max_length="32" name="booking" reference="x_2140056_lab_eq_0_booking" type="reference"/>
+        <index name="index">
+            <element name="booking"/>
+        </index>
+        <index name="index2">
+            <element name="performed_by"/>
+        </index>
+    </element>
+</database>
